@@ -7,7 +7,7 @@ import type { Locale } from "../types";
 export type Messages = {
   meta: { title: string; description: string };
   localeName: string;
-  nav: { home: string; diagnose: string; path: string; dashboard: string; teacher: string };
+  nav: { home: string; diagnose: string; path: string; dashboard: string; teacher: string; about: string };
   a11y: { switchLanguage: string; currentLanguage: string; skipToContent: string };
   home: {
     kicker: string;
@@ -21,6 +21,10 @@ export type Messages = {
     contrastTamyr: string;
     strataTitle: string;
     strataHint: string;
+  };
+  stats: {
+    title: string; lede: string; sourceLabel: string;
+    surveyTitle: string; surveyCollecting: string;
   };
   graph: {
     gradeShort: string;
@@ -62,6 +66,12 @@ export type Messages = {
     weakEvidence: string; truncated: string;
     toPath: string; retake: string;
   };
+  aiTrace: {
+    title: string; retrieval: string; generation: string; generationNone: string;
+    verificationOk: string; verificationBad: string; verificationUnknown: string;
+    originCached: string; originGenerated: string; originChunk: string;
+    unsupportedTitle: string;
+  };
   node: {
     explanationTitle: string; basedOn: string; loading: string;
     unavailable: string; unavailableHint: string;
@@ -88,6 +98,24 @@ export type Messages = {
     formAdd: string; formAdded: string; formShowJson: string; formHideJson: string;
     formJsonHint: string; formRemove: string; formErrors: string; addedBadge: string;
   };
+  about: {
+    title: string; lede: string;
+    problemTitle: string; problemBody: string;
+    causeTitle: string; causeBody: string;
+    solutionTitle: string; solutionBody: string;
+    uniqueTitle: string; uniqueBody: string; uniqueList: string[];
+    proofTitle: string; proofBody: string; proofList: string[];
+    limitsTitle: string; limitsList: string[];
+    scaleTitle: string; scaleBody: string; scaleList: string[];
+    repoLink: string; preregLink: string;
+  };
+  compare: {
+    title: string; disclaimer: string;
+    naiveTitle: string; naiveRule: string; naiveOutcome: string; naiveConclusion: string;
+    tamyrTitle: string; tamyrRule: string; tamyrOutcome: string;
+    questions: string; nodesVisited: string; gradesDown: string; causeFound: string;
+    yes: string; no: string; syntheticNote: string; stayedHere: string;
+  };
   path: {
     title: string; lede: string;
     stateRoot: string; stateNext: string; stateLocked: string;
@@ -109,6 +137,7 @@ const kk: Messages = {
     path: "Траектория",
     dashboard: "Кабинет",
     teacher: "Мұғалімге",
+    about: "Жоба туралы",
   },
   a11y: {
     switchLanguage: "Тілді ауыстыру",
@@ -129,6 +158,13 @@ const kk: Messages = {
       "TAMYR: қате → алғышарттар бойынша төмен түсу, түбірді табу, содан кейін төменнен жоғары қарай траектория.",
     strataTitle: "Қима",
     strataHint: "5-сынып төменде, 8-сынып жоғарыда. Олқылық неғұрлым терең болса, соғұрлым төмен жатыр.",
+  },
+  stats: {
+    title: "Мәселе неде",
+    lede: "Тексерілген деректер. Әр сан алғашқы дереккөз бойынша салыстырылған.",
+    sourceLabel: "Дереккөз",
+    surveyTitle: "Оқушылар сауалнамасы",
+    surveyCollecting: "Деректер жинау — үстінде. Нақты жауаптар әлі жоқ, сондықтан сан көрсетпейміз.",
   },
   graph: {
     gradeShort: "сынып",
@@ -179,6 +215,19 @@ const kk: Messages = {
     truncated: "Сұрақ шегі таусылды — түбір ең ықтимал баға болып табылады.",
     toPath: "Траекторияны көру", retake: "Диагностиканы қайталау",
   },
+  aiTrace: {
+    title: "ИИ ізі",
+    retrieval: "Тақырып бойынша бағдарламаның {n} үзіндісі табылды",
+    generation: "Түсіндірме сіздің қатеңізді ескере отырып құрылды: {tag}",
+    generationNone: "Нақты қате көрсетілмеген — тақырыптың жалпы түсіндірмесі",
+    verificationOk: "Тексерілді: әр тұжырым дереккөзбен расталған",
+    verificationBad: "Тексеруден өтпеді — бастапқы материал көрсетілген",
+    verificationUnknown: "Тексеру жүргізілмеді",
+    originCached: "Дайын жауап (желісіз де жұмыс істейді)",
+    originGenerated: "Модель нақты уақытта жасады",
+    originChunk: "Бағдарламаның бастапқы үзіндісі",
+    unsupportedTitle: "Расталмаған тұжырымдар",
+  },
   node: {
     explanationTitle: "Түсіндірме", basedOn: "Бағдарлама бөлімі негізінде", loading: "Жүктелуде…",
     unavailable: "Бұл түйін бойынша материал әзірге жоқ.",
@@ -218,6 +267,65 @@ const kk: Messages = {
     formRemove: "Жою", formErrors: "Мәтінді, кемінде екі нұсқаны және бір талдауды толтырыңыз.",
     addedBadge: "мұғалім қосқан",
   },
+  about: {
+    title: "Жоба туралы",
+    lede: "Біз не істеп жатырмыз, неге дәл осылай және мұны қалай тексереміз.",
+    problemTitle: "Мәселе",
+    problemBody: "Қазақстан оқушыларының жартысы математикадан базалық деңгейге жетпейді. Бұл ретте ауылда интернет бар — қала деңгейінде дерлік. Демек мәселе қолжетімділікте емес.",
+    causeTitle: "Себебі",
+    causeBody: "Оқушы 7-сыныпта теңдеу шығара алмайды, өйткені 6-сыныпта бөлшектер меңгерілмеген. Бағдарлама әрі қарай жүреді, ал олқылық орнында қалады және жаңа тақырыптарды бөгейді. Бейімделетін жүйелер қате шыққанда тапсырманы жеңілдетеді — олқылық сол күйінде қала береді.",
+    solutionTitle: "Шешім",
+    solutionBody: "Біз білімді алғышарттар графы ретінде сипаттаймыз. Қате шыққанда жеңілдетпейміз, граф бойынша төмен түсеміз — оқушы сенімді меңгерген алғашқы дағдыға дейін. Дәл сол — түбір. Одан кейін траектория төменнен жоғары қарай құрылады.",
+    uniqueTitle: "Ерекшелігі",
+    uniqueBody: "Маршрутты тілдік модель емес, детерминделген алгоритм таңдайды.",
+    uniqueList: [
+      "Бір жауап жиыны әрқашан бір нәтиже береді — қадам сайын түсіндіруге болады",
+      "Бинарлық іздеу + алғышарттар бойынша нақтылау: 554 жұпта дәлдік 99,8%",
+      "Тілдік модель тек таңдалған түйінді түсіндіреді, маршрутқа әсер етпейді",
+      "Түсіндірме бағдарлама үзінділерінде негізделеді; тексеруден өтпесе — көрсетілмейді",
+    ],
+    proofTitle: "Қалай тексереміз",
+    proofBody: "Метрикалар мен сәтсіздік шектері деректер алынғанға дейін жазылған. Нәтиже белгілі болғаннан кейін шектер өзгертілмеді.",
+    proofList: [
+      "Түбірді табу дәлдігі: 10 профильде 10, толық іріктемеде 99,8%",
+      "Түбірге дейінгі сұрақтардың медианасы: 8 (шек — 15)",
+      "Іріктеуден үнем: 1,28× — сәттілік шегі (1,5×) алынған жоқ, ашық айтылған",
+      "172 юнит-тест, деректердің үш валидаторы құрастыруға жалғанған",
+    ],
+    limitsTitle: "Не мәлімдемейміз",
+    limitsList: [
+      "Үлгерімнің артқаны өлшенген жоқ — нақты оқушыларда сынақ болмаған",
+      "Граф командамен, пән мамандарынсыз белгіленген",
+      "Seed-профильдер синтетикалық, олардың артында нақты бала жоқ",
+      "Түсіндірмелер мәтіні қолмен жазылған, модель жасаған жоқ",
+      "Қазақ терминологиясы ана тілді маманмен тексерілмеген",
+    ],
+    scaleTitle: "Масштабтау",
+    scaleBody: "Алдымен бір пәнді нақты оқушыларда дәлелдеу, содан кейін кеңейту.",
+    scaleList: [
+      "Графты пән мамандарымен белгілеу және ГОСО-мен келісу",
+      "Түбірді нақты когортта тексеру: мұғалім диагнозымен салыстыру",
+      "Қырлардың салмағы: барлық алғышарт бірдей маңызды емес",
+      "Офлайн — негізгі сценарий ретінде, бонус емес",
+    ],
+    repoLink: "Бастапқы код",
+    preregLink: "Метрикалар мен шектеулер",
+  },
+  compare: {
+    title: "Айырмашылық неде",
+    disclaimer: "Сол жақта — «қате болса, сол тақырыпта жеңілірек тапсырма бер» деген ереженің симуляциясы. Бұл нақты бөгде өнімнің өлшемі емес: біз бәсекелестерді тексерген жоқпыз, тек логикадағы айырмашылықты көрсетеміз. Екеуі де бір оқушыны, бір бюджетпен (15 сұрақ) өтеді.",
+    naiveTitle: "Әдеттегі бейімделетін жүйе",
+    naiveRule: "Қате → сол тақырыпта жеңілірек тапсырма",
+    naiveOutcome: "Тақырыпта тұрып қалды",
+    naiveConclusion: "Тақырып меңгерілмеген — себебі белгісіз",
+    tamyrTitle: "TAMYR",
+    tamyrRule: "Қате → алғышарттар бойынша төмен түсу",
+    tamyrOutcome: "Түбір табылды",
+    questions: "сұрақ", nodesVisited: "түйін қаралды", gradesDown: "сынып төмен",
+    causeFound: "Себебі табылды", yes: "иә", no: "жоқ",
+    syntheticNote: "{n} қадам модельденген: түйіннің нақты тапсырмалары таусылды, жүйе әрі қарай жеңілдете берер еді.",
+    stayedHere: "сол жерде қалды",
+  },
   path: {
     title: "Траектория", lede: "Төменнен жоғары қарай: түбірден мақсатқа дейін.",
     stateRoot: "түбір", stateNext: "келесі қадам", stateLocked: "бекітулі",
@@ -239,6 +347,7 @@ const ru: Messages = {
     path: "Траектория",
     dashboard: "Кабинет",
     teacher: "Учителю",
+    about: "О проекте",
   },
   a11y: {
     switchLanguage: "Сменить язык",
@@ -259,6 +368,13 @@ const ru: Messages = {
       "TAMYR: ошибка → спуск по предпосылкам, поиск корня, затем траектория снизу вверх.",
     strataTitle: "Разрез",
     strataHint: "5 класс внизу, 8 наверху. Чем глубже пробел, тем ниже он лежит.",
+  },
+  stats: {
+    title: "В чём проблема",
+    lede: "Проверяемые данные. Каждое число сверено по первоисточнику.",
+    sourceLabel: "Источник",
+    surveyTitle: "Опрос учеников",
+    surveyCollecting: "Сбор данных — в процессе. Реальных ответов пока нет, поэтому цифр не показываем.",
   },
   graph: {
     gradeShort: "класс",
@@ -309,6 +425,19 @@ const ru: Messages = {
     truncated: "Лимит вопросов исчерпан — корень является наиболее вероятной оценкой.",
     toPath: "Смотреть траекторию", retake: "Пройти заново",
   },
+  aiTrace: {
+    title: "След ИИ",
+    retrieval: "Найдено фрагментов программы по теме: {n}",
+    generation: "Объяснение построено с учётом вашей ошибки: {tag}",
+    generationNone: "Конкретная ошибка не указана — общее объяснение темы",
+    verificationOk: "Проверено: каждое утверждение подтверждено источником",
+    verificationBad: "Проверка не пройдена — показан исходный материал",
+    verificationUnknown: "Проверка не проводилась",
+    originCached: "Предзаготовленный ответ (работает и без сети)",
+    originGenerated: "Сгенерировано моделью в реальном времени",
+    originChunk: "Исходный фрагмент программы",
+    unsupportedTitle: "Неподтверждённые утверждения",
+  },
   node: {
     explanationTitle: "Объяснение", basedOn: "Основано на разделе программы", loading: "Загружаем…",
     unavailable: "По этому узлу материала пока нет.",
@@ -348,6 +477,65 @@ const ru: Messages = {
     formRemove: "Удалить", formErrors: "Заполните текст, минимум два варианта и хотя бы один разбор.",
     addedBadge: "добавлено учителем",
   },
+  about: {
+    title: "О проекте",
+    lede: "Что мы делаем, почему именно так и как это проверяем.",
+    problemTitle: "Проблема",
+    problemBody: "Половина школьников Казахстана не достигает базового уровня по математике. При этом интернет в селе есть — почти на городском уровне. Значит, дело не в доступе.",
+    causeTitle: "Причина",
+    causeBody: "Ученик 7 класса не решает уравнения, потому что в 6 классе не закрыты дроби. Программа идёт дальше, а пробел остаётся на месте и блокирует новые темы. Адаптивные системы при ошибке упрощают задание — пробел так и остаётся нетронутым.",
+    solutionTitle: "Решение",
+    solutionBody: "Мы описываем знания графом предпосылок. При ошибке не упрощаем, а спускаемся вниз по графу — до первого навыка, которым ученик владеет уверенно. Это и есть корень. Дальше траектория строится снизу вверх.",
+    uniqueTitle: "Уникальность",
+    uniqueBody: "Маршрут выбирает детерминированный алгоритм, а не языковая модель.",
+    uniqueList: [
+      "Один и тот же набор ответов всегда даёт один результат — его можно объяснить по шагам",
+      "Бинарный поиск плюс уточнение по прямым предпосылкам: точность 99,8% на 554 парах",
+      "Языковая модель только объясняет выбранный узел и не влияет на маршрут",
+      "Объяснение заземлено на фрагменты программы; не прошло проверку — не показывается",
+    ],
+    proofTitle: "Как проверяем",
+    proofBody: "Метрики и пороги провала записаны до получения данных. После того как результат стал известен, пороги не менялись.",
+    proofList: [
+      "Точность поиска корня: 10 из 10 профилей, 99,8% на полной выборке",
+      "Медиана вопросов до корня: 8 при лимите 15",
+      "Экономия на переборе: 1,28× — порог успеха (1,5×) не взят, сказано прямо",
+      "172 юнит-теста, три валидатора данных подключены к сборке",
+    ],
+    limitsTitle: "Чего мы не заявляем",
+    limitsList: [
+      "Что успеваемость выросла — замеров на реальных учениках не было",
+      "Что граф соответствует ГОСО: он размечен командой, без предметников",
+      "Что seed-профили представляют реальное распределение: они синтетические",
+      "Что тексты объяснений сгенерированы моделью: они написаны вручную по программе",
+      "Что казахская терминология корректна: вычитки носителем не было",
+    ],
+    scaleTitle: "Масштабирование",
+    scaleBody: "Сначала доказать один предмет на реальных учениках, потом расширять.",
+    scaleList: [
+      "Разметка графа предметниками и согласование с ГОСО",
+      "Валидация корня на реальной когорте: сравнение с диагнозом учителя",
+      "Веса рёбер: не все предпосылки одинаково критичны",
+      "Офлайн как основной сценарий для школ со слабым интернетом, а не как бонус",
+    ],
+    repoLink: "Исходный код",
+    preregLink: "Метрики и ограничения",
+  },
+  compare: {
+    title: "В чём разница",
+    disclaimer: "Слева — симуляция правила «при ошибке дай задание полегче в той же теме». Это не замер реального стороннего продукта: мы не тестировали конкурентов, а показываем разницу в логике. Оба прогоняют одного и того же ученика с одним бюджетом в 15 вопросов.",
+    naiveTitle: "Обычная адаптивная система",
+    naiveRule: "Ошибка → задание полегче в той же теме",
+    naiveOutcome: "Топчется в теме",
+    naiveConclusion: "Тема не освоена — причина неизвестна",
+    tamyrTitle: "TAMYR",
+    tamyrRule: "Ошибка → спуск по предпосылкам",
+    tamyrOutcome: "Корень найден",
+    questions: "вопросов", nodesVisited: "узлов пройдено", gradesDown: "класса вниз",
+    causeFound: "Причина найдена", yes: "да", no: "нет",
+    syntheticNote: "{n} шагов смоделированы: реальные задания узла кончились, дальше система продолжала бы упрощать.",
+    stayedHere: "осталась на месте",
+  },
   path: {
     title: "Траектория", lede: "Снизу вверх: от корня к цели.",
     stateRoot: "корень", stateNext: "следующий шаг", stateLocked: "закрыто",
@@ -369,6 +557,7 @@ const en: Messages = {
     path: "Path",
     dashboard: "Dashboard",
     teacher: "For teachers",
+    about: "About",
   },
   a11y: {
     switchLanguage: "Switch language",
@@ -389,6 +578,13 @@ const en: Messages = {
       "TAMYR: a wrong answer → a descent through prerequisites, the root, then a path built bottom-up.",
     strataTitle: "The cross-section",
     strataHint: "Grade 5 at the bottom, grade 8 on top. The deeper the gap, the lower it sits.",
+  },
+  stats: {
+    title: "What the problem is",
+    lede: "Verifiable data. Every figure was checked against its primary source.",
+    sourceLabel: "Source",
+    surveyTitle: "Student survey",
+    surveyCollecting: "Data collection is under way. There are no real responses yet, so we show no numbers.",
   },
   graph: {
     gradeShort: "grade",
@@ -439,6 +635,19 @@ const en: Messages = {
     truncated: "Question limit reached — the root is the most likely estimate.",
     toPath: "See the path", retake: "Take it again",
   },
+  aiTrace: {
+    title: "AI trace",
+    retrieval: "Curriculum fragments found for this topic: {n}",
+    generation: "The explanation was built around your error: {tag}",
+    generationNone: "No specific error given — a general explanation of the topic",
+    verificationOk: "Verified: every statement is backed by a source",
+    verificationBad: "Verification failed — the original material is shown instead",
+    verificationUnknown: "No verification was run",
+    originCached: "Pre-built answer (works offline)",
+    originGenerated: "Generated by the model in real time",
+    originChunk: "Original curriculum excerpt",
+    unsupportedTitle: "Unsupported statements",
+  },
   node: {
     explanationTitle: "Explanation", basedOn: "Based on the curriculum section", loading: "Loading…",
     unavailable: "No material for this node yet.",
@@ -477,6 +686,65 @@ const en: Messages = {
     formJsonHint: "The structure that would go into questions.json on a real commit.",
     formRemove: "Remove", formErrors: "Fill in the text, at least two options and one explanation.",
     addedBadge: "added by teacher",
+  },
+  about: {
+    title: "About the project",
+    lede: "What we do, why we do it this way, and how we check it.",
+    problemTitle: "The problem",
+    problemBody: "Half of Kazakhstan's students do not reach the baseline level in mathematics. Meanwhile rural internet access is nearly the same as in cities. So access is not the bottleneck.",
+    causeTitle: "The cause",
+    causeBody: "A seventh-grader cannot solve equations because fractions were never closed in grade six. The curriculum moves on; the gap stays where it was and blocks every new topic. Adaptive systems respond to a wrong answer by making the task easier — the gap remains untouched.",
+    solutionTitle: "The solution",
+    solutionBody: "We model knowledge as a prerequisite graph. On a wrong answer we do not simplify — we descend the graph to the first skill the student holds with confidence. That is the root. The path is then rebuilt from the bottom up.",
+    uniqueTitle: "What makes it different",
+    uniqueBody: "The route is chosen by a deterministic algorithm, not by a language model.",
+    uniqueList: [
+      "The same answers always produce the same result — and it can be explained step by step",
+      "Binary search plus refinement along direct prerequisites: 99.8% accuracy over 554 pairs",
+      "The language model only explains the chosen node; it never affects the route",
+      "Explanations are grounded in curriculum excerpts; ungrounded text is never shown",
+    ],
+    proofTitle: "How we verify",
+    proofBody: "Metrics and failure thresholds were written down before any data was collected. No threshold was revised after a result became known.",
+    proofList: [
+      "Root-finding accuracy: 10 of 10 profiles, 99.8% on the full sweep",
+      "Median questions to the root: 8, against a limit of 15",
+      "Search economy: 1.28× — the success threshold (1.5×) was not met, and we say so",
+      "172 unit tests; three data validators gate the build",
+    ],
+    limitsTitle: "What we do not claim",
+    limitsList: [
+      "That grades improved — nothing was measured on real students",
+      "That the graph matches the national standard: it was authored by the team",
+      "That the seed profiles reflect a real distribution: they are synthetic",
+      "That the explanation texts were model-generated: they were written by hand",
+      "That the Kazakh terminology is correct: no native speaker has reviewed it",
+    ],
+    scaleTitle: "Scaling",
+    scaleBody: "Prove one subject on real students first, then expand.",
+    scaleList: [
+      "Have subject teachers author the graph and align it with the national standard",
+      "Validate the root on a real cohort against a teacher's own diagnosis",
+      "Edge weights: not every prerequisite is equally critical",
+      "Offline as the primary scenario for low-connectivity schools, not a bonus",
+    ],
+    repoLink: "Source code",
+    preregLink: "Metrics and limitations",
+  },
+  compare: {
+    title: "What makes the difference",
+    disclaimer: "On the left is a simulation of the rule \u201con a wrong answer, give an easier task in the same topic\u201d. This is not a measurement of any real third-party product: we did not test competitors, we show the difference in logic. Both run the same student on the same budget of 15 questions.",
+    naiveTitle: "A typical adaptive system",
+    naiveRule: "Wrong answer → an easier task in the same topic",
+    naiveOutcome: "Stuck inside the topic",
+    naiveConclusion: "Topic not mastered — cause unknown",
+    tamyrTitle: "TAMYR",
+    tamyrRule: "Wrong answer → descent through prerequisites",
+    tamyrOutcome: "Root found",
+    questions: "questions", nodesVisited: "nodes visited", gradesDown: "grades down",
+    causeFound: "Cause identified", yes: "yes", no: "no",
+    syntheticNote: "{n} steps are modelled: the node ran out of real tasks, and the system would keep simplifying.",
+    stayedHere: "stayed put",
   },
   path: {
     title: "Path", lede: "Bottom-up: from the root to the target.",

@@ -102,6 +102,26 @@ export type Student = {
   diagnosedAt: string;
 };
 
+/**
+ * Проверяемый факт о проблеме. `source` — ссылка на первоисточник, она
+ * не переводится; `label` и `note` переведены, потому что их читает человек.
+ */
+export type Stat = {
+  id: string;
+  /** Само число, как показывается: «50%», «~4 700 ₸/час». */
+  value: string;
+  label: LocalizedText;
+  note: LocalizedText;
+  source: string;
+};
+
+export type StatsFile = {
+  version: string;
+  /** `collecting` означает, что данных ещё нет и показывать нечего. */
+  status: "ready" | "collecting";
+  stats: Stat[];
+};
+
 /* --- Диагностика ------------------------------------------------ */
 
 /**

@@ -49,6 +49,8 @@ function fromCache(nodeId: string, tag: MisconceptionTag, locale: Locale): Expla
 
   return {
     status: "cached",
+    tag,
+    retrievedCount: hit.sourceIds.length,
     explanation: hit.explanation,
     sources: hit.sourceIds.map((id) => sourceById.get(id) ?? id),
     sourceLang: hit.locale,
@@ -67,6 +69,8 @@ export async function explain(
   if (!nodesWithCurriculum.has(nodeId)) {
     return {
       status: "unavailable",
+      tag,
+      retrievedCount: 0,
       explanation: null,
       sources: [],
       sourceLang: null,
@@ -94,6 +98,8 @@ export async function explain(
     // Офлайн или сервер недоступен. Заглушка, а не пустой экран.
     return {
       status: "unavailable",
+      tag,
+      retrievedCount: 0,
       explanation: null,
       sources: [],
       sourceLang: null,

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Comparison } from "@/components/comparison";
 import { DiagnosisTrace } from "@/components/diagnosis-trace";
 import { gdiBand, GDI_BAND_LABELS } from "@/lib/gdi";
 import { loadGraph } from "@/lib/graph";
@@ -117,7 +118,12 @@ export default function ResultPage() {
         {result.languageBarrier === "not_assessed" && <li>· {t.result.barrierNotAssessed}</li>}
       </ul>
 
-      <div className="mt-10 flex flex-wrap gap-3">
+      {/* Сравнение с наивным правилом — эмоциональный аргумент за метод. */}
+      <div className="mt-14">
+        <Comparison result={result} />
+      </div>
+
+      <div className="mt-14 flex flex-wrap gap-3">
         <Link
           href="/path"
           className="rounded-full bg-ink px-6 py-3 font-display text-sm font-semibold text-chalk"

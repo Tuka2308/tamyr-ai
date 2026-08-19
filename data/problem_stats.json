@@ -1,0 +1,67 @@
+{
+  "version": "2026.08.20",
+  "status": "ready",
+  "note": "Проверяемые факты о проблеме. Каждое число сверено по первоисточнику командой. Ничего не оценивалось и не округлялось в свою пользу; там, где цифра может быть прочитана шире, чем она есть, это сказано в note.",
+  "stats": [
+    {
+      "id": "pisa_baseline",
+      "value": "50%",
+      "label": {
+        "kk": "Қазақстан оқушылары математикадан базалық деңгейге жетпейді",
+        "ru": "школьников Казахстана не достигают базового уровня по математике",
+        "en": "of students in Kazakhstan do not reach the baseline level in mathematics"
+      },
+      "note": {
+        "kk": "Орташа балл — 425; оқушылардың тек 1,6%-ы ең жоғары деңгейге (5–6) жетті.",
+        "ru": "Средний балл — 425; лишь 1,6% учеников достигли высшего уровня (5–6).",
+        "en": "The average score is 425; only 1.6% of students reached the top levels (5–6)."
+      },
+      "source": "OECD PISA-2022, Национальный доклад Казахстана (taldau.edu.kz), декабрь 2023"
+    },
+    {
+      "id": "small_schools",
+      "value": "40%+",
+      "label": {
+        "kk": "Қазақстан мектептері — шағын жинақты",
+        "ru": "школ Казахстана — малокомплектные",
+        "en": "of schools in Kazakhstan are small rural schools"
+      },
+      "note": {
+        "kk": "Бұл — мектептердің шамамен 40%-ы, балалардың 40%-ы емес: онда елдегі 3,8 млн оқушының шамамен 190 мыңы оқиды (~5%). Бірақ дәл сондай мектептерде әр пән бойынша бейінді мұғалім жиі болмайды.",
+        "ru": "Это ~40% школ, а не ~40% детей: там учится около 190 тыс. из 3,8 млн школьников страны (~5%). Но именно в таких школах чаще нет профильного учителя по каждому предмету.",
+        "en": "This is ~40% of schools, not ~40% of children: about 190,000 of the country's 3.8 million students study there (~5%). But these are exactly the schools most likely to lack a subject teacher for every subject."
+      },
+      "source": "Комитет Мажилиса РК, 2023 (qaz-media.kz)"
+    },
+    {
+      "id": "rural_internet",
+      "value": "94%",
+      "label": {
+        "kk": "Қазақстанның ауыл тұрғындарында интернет бар — қаламен тең дерлік (95%)",
+        "ru": "сельских жителей Казахстана имеют доступ к интернету — почти как в городе (95%)",
+        "en": "of rural residents in Kazakhstan have internet access — almost the same as in cities (95%)"
+      },
+      "note": {
+        "kk": "Яғни мәселе желіге қолжетімділікте емес — олқылықтың түбірі басқа жерде.",
+        "ru": "То есть дело не в доступе к сети — корень проблемы в другом.",
+        "en": "So the problem is not access to the network — the root of it lies elsewhere."
+      },
+      "source": "International Telecommunication Union (ITU), данные 2022"
+    },
+    {
+      "id": "tutor_cost",
+      "value": "~4 700 ₸/час",
+      "label": {
+        "kk": "Репетитормен бір сабақтың орташа құны",
+        "ru": "средняя стоимость одного занятия с репетитором",
+        "en": "average cost of one hour with a private tutor"
+      },
+      "note": {
+        "kk": "Бірнеше тақырып бойынша тұрақты дайындық көптеген отбасы үшін тез қолжетімсіз болып қалады.",
+        "ru": "Регулярная подготовка по нескольким темам быстро становится недоступной для многих семей.",
+        "en": "Regular preparation across several topics quickly becomes unaffordable for many families."
+      },
+      "source": "исследование BUKI School, 2026 (alau.kz)"
+    }
+  ]
+}

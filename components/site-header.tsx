@@ -35,6 +35,9 @@ export function SiteHeader() {
           <Link href="/teacher" className="text-sm text-bedrock transition-colors hover:text-ink">
             {t.nav.teacher}
           </Link>
+          <Link href="/about" className="text-sm text-bedrock transition-colors hover:text-ink">
+            {t.nav.about}
+          </Link>
         </nav>
 
         <div className="ml-auto md:ml-0">

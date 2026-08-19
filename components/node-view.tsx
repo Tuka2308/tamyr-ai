@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { ExplainResponse } from "@/app/api/explain/route";
+import { AiTracePanel } from "./ai-trace-panel";
 import { explain as resolveExplanation } from "@/lib/explain-client";
 import { useLocale } from "@/lib/i18n";
 import { loadResult } from "@/lib/session";
@@ -113,6 +114,8 @@ export function NodeView({ node, questions }: { node: Node; questions: Question[
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
+
+            <AiTracePanel response={explain} />
 
             {/* Маркер источника — обязателен рядом с любым объяснением. */}
             {explain.sources.length > 0 && (

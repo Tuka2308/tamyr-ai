@@ -56,6 +56,14 @@ const cache = new Map<string, CacheEntry>(
 export type ExplainResponse = {
   /** Что показывать. */
   status: "cached" | "generated" | "chunk_fallback" | "unavailable";
+  /**
+   * Эхо тега ошибки, под который строилось объяснение. Возвращается, чтобы
+   * панель «след ИИ» читала его из ответа, а не пересобирала из локального
+   * состояния: показанное там должно быть тем же, чем пользовался бэкенд.
+   */
+  tag: MisconceptionTag;
+  /** Сколько фрагментов программы реально ушло в контекст. */
+  retrievedCount: number;
   explanation: string | null;
   /** Подписи «Основано на разделе программы: …». */
   sources: string[];
@@ -94,6 +102,8 @@ export async function POST(request: Request) {
   if (!hasCurriculum(nodeId)) {
     return NextResponse.json<ExplainResponse>({
       status: "unavailable",
+      tag,
+      retrievedCount: 0,
       explanation: null,
       sources: [],
       sourceLang: null,
@@ -114,6 +124,8 @@ export async function POST(request: Request) {
   if (hit) {
     return NextResponse.json<ExplainResponse>({
       status: "cached",
+      tag,
+      retrievedCount: hit.sourceIds.length,
       explanation: hit.explanation,
       sources: sourceLabels(hit.sourceIds),
       sourceLang: hit.locale,
@@ -136,6 +148,8 @@ export async function POST(request: Request) {
     if (!first) {
       return NextResponse.json<ExplainResponse>({
         status: "unavailable",
+        tag,
+        retrievedCount: 0,
         explanation: null,
         sources: [],
         sourceLang: null,
@@ -147,6 +161,8 @@ export async function POST(request: Request) {
     }
     return NextResponse.json<ExplainResponse>({
       status: "chunk_fallback",
+      tag,
+      retrievedCount: retrieval.chunks.length,
       explanation: first.text,
       sources: [first.source],
       sourceLang: first.lang,
@@ -218,6 +234,8 @@ export async function POST(request: Request) {
       const first = retrieval.chunks[0]!;
       return NextResponse.json<ExplainResponse>({
         status: "chunk_fallback",
+        tag,
+        retrievedCount: retrieval.chunks.length,
         explanation: first.text,
         sources: [first.source],
         sourceLang: first.lang,
@@ -230,6 +248,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json<ExplainResponse>({
       status: "generated",
+      tag,
+      retrievedCount: retrieval.chunks.length,
       explanation,
       sources: retrieval.chunks.map((c) => c.source),
       sourceLang: retrieval.sourceLang,
@@ -244,6 +264,8 @@ export async function POST(request: Request) {
     const first = retrieval.chunks[0];
     return NextResponse.json<ExplainResponse>({
       status: first ? "chunk_fallback" : "unavailable",
+      tag,
+      retrievedCount: retrieval.chunks.length,
       explanation: first?.text ?? null,
       sources: first ? [first.source] : [],
       sourceLang: first?.lang ?? null,

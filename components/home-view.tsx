@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMessages } from "@/lib/i18n";
+import { ProblemStats } from "./problem-stats";
 import { StrataPreview, type Stratum } from "./strata-preview";
 
 export function HomeView({ strata, rootId }: { strata: Stratum[]; rootId: string }) {
@@ -58,6 +59,10 @@ export function HomeView({ strata, rootId }: { strata: Stratum[]; rootId: string
           </div>
           <StrataPreview strata={strata} rootId={rootId} />
         </section>
+      </div>
+
+      <div className="mt-16">
+        <ProblemStats />
       </div>
     </div>
   );
