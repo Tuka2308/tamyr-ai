@@ -1,0 +1,231 @@
+{
+  "version": "2026.08.18",
+  "subject": "math",
+  "note": "Граф предпосылок, математика 5-8 класс. centrality НЕ хранится здесь — считается обходом графа в lib/graph.ts. Методика разметки: docs/graph.md",
+  "nodes": [
+    { "id": "natural_numbers", "grade": 5, "subject": "math", "prerequisites": [],
+      "title": { "kk": "Натурал сандар және арифметикалық амалдар", "ru": "Натуральные числа и арифметические действия", "en": "Natural numbers and arithmetic operations" } },
+
+    { "id": "order_of_operations", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers"],
+      "title": { "kk": "Амалдардың орындалу реті, жақшалар", "ru": "Порядок действий и скобки", "en": "Order of operations and brackets" } },
+
+    { "id": "nat_divisibility", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers"],
+      "title": { "kk": "Бөлінгіштік белгілері, бөлгіштер мен еселіктер", "ru": "Признаки делимости, делители и кратные", "en": "Divisibility rules, divisors and multiples" } },
+
+    { "id": "prime_factorization", "grade": 5, "subject": "math", "prerequisites": ["nat_divisibility"],
+      "title": { "kk": "Жай көбейткіштерге жіктеу", "ru": "Разложение на простые множители", "en": "Prime factorization" } },
+
+    { "id": "gcd_lcm", "grade": 5, "subject": "math", "prerequisites": ["nat_divisibility"],
+      "title": { "kk": "ЕҮОБ және ЕКОЕ", "ru": "Наибольший общий делитель и наименьшее общее кратное", "en": "Greatest common divisor and least common multiple" } },
+
+    { "id": "fractions_basic", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers"],
+      "title": { "kk": "Жай бөлшектер: ұғымы, салыстыру", "ru": "Обыкновенные дроби: понятие, сравнение", "en": "Common fractions: concept and comparison" } },
+
+    { "id": "decimal_basic", "grade": 5, "subject": "math", "prerequisites": ["fractions_basic"],
+      "title": { "kk": "Ондық бөлшектер: жазылуы және салыстыру", "ru": "Десятичные дроби: запись и сравнение", "en": "Decimal fractions: notation and comparison" } },
+
+    { "id": "decimal_operations", "grade": 5, "subject": "math", "prerequisites": ["decimal_basic"],
+      "title": { "kk": "Ондық бөлшектерге амалдар қолдану", "ru": "Действия с десятичными дробями", "en": "Operations with decimal fractions" } },
+
+    { "id": "rounding_estimation", "grade": 5, "subject": "math", "prerequisites": ["decimal_basic"],
+      "title": { "kk": "Дөңгелектеу және шамалау", "ru": "Округление и прикидка результата", "en": "Rounding and estimation" } },
+
+    { "id": "units_measure", "grade": 5, "subject": "math", "prerequisites": ["decimal_operations"],
+      "title": { "kk": "Өлшем бірліктері және шамаларды түрлендіру", "ru": "Единицы измерения и перевод величин", "en": "Units of measurement and conversion" } },
+
+    { "id": "powers_natural", "grade": 5, "subject": "math", "prerequisites": ["order_of_operations"],
+      "title": { "kk": "Натурал көрсеткішті дәреже", "ru": "Степень с натуральным показателем", "en": "Powers with natural exponents" } },
+
+    { "id": "geometry_intro", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers"],
+      "title": { "kk": "Нүкте, түзу, кесінді, сәуле, бұрыш", "ru": "Точка, прямая, отрезок, луч, угол", "en": "Point, line, segment, ray, angle" } },
+
+    { "id": "angle_measure", "grade": 5, "subject": "math", "prerequisites": ["geometry_intro"],
+      "title": { "kk": "Бұрыштарды өлшеу және салу", "ru": "Измерение и построение углов", "en": "Measuring and constructing angles" } },
+
+    { "id": "perimeter_area_basic", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers", "units_measure"],
+      "title": { "kk": "Тіктөртбұрыштың периметрі мен ауданы", "ru": "Периметр и площадь прямоугольника", "en": "Perimeter and area of a rectangle" } },
+
+    { "id": "volume_basic", "grade": 5, "subject": "math", "prerequisites": ["perimeter_area_basic"],
+      "title": { "kk": "Тікбұрышты параллелепипедтің көлемі", "ru": "Объём прямоугольного параллелепипеда", "en": "Volume of a rectangular prism" } },
+
+    { "id": "coordinate_ray", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers", "decimal_basic"],
+      "title": { "kk": "Координаталық сәуле және шкалалар", "ru": "Координатный луч и шкалы", "en": "Number ray and scales" } },
+
+    { "id": "text_problems_arithmetic", "grade": 5, "subject": "math", "prerequisites": ["order_of_operations", "fractions_basic"],
+      "title": { "kk": "Мәтінді есептерді арифметикалық тәсілмен шығару", "ru": "Текстовые задачи арифметическим способом", "en": "Word problems solved arithmetically" } },
+
+    { "id": "average_value", "grade": 5, "subject": "math", "prerequisites": ["decimal_operations"],
+      "title": { "kk": "Арифметикалық орта", "ru": "Среднее арифметическое", "en": "Arithmetic mean" } },
+
+    { "id": "data_tables_basic", "grade": 5, "subject": "math", "prerequisites": ["natural_numbers"],
+      "title": { "kk": "Кестелер мен диаграммаларды оқу", "ru": "Чтение таблиц и диаграмм", "en": "Reading tables and charts" } },
+
+    { "id": "frac_common_denom", "grade": 6, "subject": "math", "prerequisites": ["fractions_basic"],
+      "title": { "kk": "Бөлшектерді ортақ бөлімге келтіру", "ru": "Приведение дробей к общему знаменателю", "en": "Reducing fractions to a common denominator" } },
+
+    { "id": "frac_operations", "grade": 6, "subject": "math", "prerequisites": ["frac_common_denom"],
+      "title": { "kk": "Жай бөлшектерге амалдар қолдану (+, −, ×, ÷)", "ru": "Действия с обыкновенными дробями (+, −, ×, ÷)", "en": "Operations with common fractions (+, −, ×, ÷)" } },
+
+    { "id": "mixed_numbers", "grade": 6, "subject": "math", "prerequisites": ["frac_common_denom"],
+      "title": { "kk": "Аралас сандар", "ru": "Смешанные числа", "en": "Mixed numbers" } },
+
+    { "id": "frac_decimal_convert", "grade": 6, "subject": "math", "prerequisites": ["frac_operations", "decimal_operations"],
+      "title": { "kk": "Жай бөлшектерді ондық бөлшекке айналдыру", "ru": "Перевод обыкновенных дробей в десятичные", "en": "Converting common fractions to decimals" } },
+
+    { "id": "negative_numbers", "grade": 6, "subject": "math", "prerequisites": ["frac_operations"],
+      "title": { "kk": "Теріс сандар және оларға амалдар қолдану", "ru": "Отрицательные числа и действия с ними", "en": "Negative numbers and operations with them" } },
+
+    { "id": "rational_numbers", "grade": 6, "subject": "math", "prerequisites": ["negative_numbers"],
+      "title": { "kk": "Рационал сандар, модуль", "ru": "Рациональные числа и модуль", "en": "Rational numbers and absolute value" } },
+
+    { "id": "rational_operations", "grade": 6, "subject": "math", "prerequisites": ["rational_numbers"],
+      "title": { "kk": "Рационал сандарға амалдар қолдану", "ru": "Действия с рациональными числами", "en": "Operations with rational numbers" } },
+
+    { "id": "ratio_basic", "grade": 6, "subject": "math", "prerequisites": ["frac_operations"],
+      "title": { "kk": "Қатынастар", "ru": "Отношения величин", "en": "Ratios" } },
+
+    { "id": "proportion", "grade": 6, "subject": "math", "prerequisites": ["ratio_basic"],
+      "title": { "kk": "Пропорция және оның негізгі қасиеті", "ru": "Пропорция и её основное свойство", "en": "Proportion and its main property" } },
+
+    { "id": "direct_inverse_proportion", "grade": 6, "subject": "math", "prerequisites": ["proportion"],
+      "title": { "kk": "Тура және кері пропорционалдық", "ru": "Прямая и обратная пропорциональность", "en": "Direct and inverse proportionality" } },
+
+    { "id": "percent_basic", "grade": 6, "subject": "math", "prerequisites": ["decimal_operations", "frac_decimal_convert"],
+      "title": { "kk": "Пайыз: ұғымы және түрлендіру", "ru": "Проценты: понятие и перевод", "en": "Percentages: concept and conversion" } },
+
+    { "id": "percent_problems", "grade": 6, "subject": "math", "prerequisites": ["percent_basic", "proportion"],
+      "title": { "kk": "Пайызға берілген есептердің үш түрі", "ru": "Три типа задач на проценты", "en": "Three types of percentage problems" } },
+
+    { "id": "scale_maps", "grade": 6, "subject": "math", "prerequisites": ["proportion", "units_measure"],
+      "title": { "kk": "Масштаб", "ru": "Масштаб", "en": "Scale" } },
+
+    { "id": "coordinate_plane", "grade": 6, "subject": "math", "prerequisites": ["negative_numbers", "coordinate_ray"],
+      "title": { "kk": "Координаталық жазықтық", "ru": "Координатная плоскость", "en": "Coordinate plane" } },
+
+    { "id": "circle_circumference", "grade": 6, "subject": "math", "prerequisites": ["decimal_operations", "perimeter_area_basic"],
+      "title": { "kk": "Шеңбер, шеңбердің ұзындығы және дөңгелектің ауданы", "ru": "Окружность, длина окружности и площадь круга", "en": "Circle, circumference and area of a disc" } },
+
+    { "id": "symmetry", "grade": 6, "subject": "math", "prerequisites": ["coordinate_plane", "geometry_intro"],
+      "title": { "kk": "Фигуралардың симметриясы", "ru": "Симметрия фигур", "en": "Symmetry of figures" } },
+
+    { "id": "divisibility_advanced", "grade": 6, "subject": "math", "prerequisites": ["gcd_lcm", "prime_factorization"],
+      "title": { "kk": "Өзара жай сандар және бөлінгіштік белгілері", "ru": "Взаимно простые числа и признаки делимости на 3, 9, 11", "en": "Coprime numbers and divisibility by 3, 9, 11" } },
+
+    { "id": "simple_equations_6", "grade": 6, "subject": "math", "prerequisites": ["rational_operations"],
+      "title": { "kk": "Қарапайым теңдеулер", "ru": "Простейшие уравнения: нахождение неизвестного компонента", "en": "Simplest equations: finding the unknown term" } },
+
+    { "id": "probability_intro", "grade": 6, "subject": "math", "prerequisites": ["frac_operations", "percent_basic"],
+      "title": { "kk": "Кездейсоқ оқиғалар және ықтималдық", "ru": "Случайные события и вероятность как доля", "en": "Random events and probability as a share" } },
+
+    { "id": "linear_expressions", "grade": 7, "subject": "math", "prerequisites": ["negative_numbers"],
+      "title": { "kk": "Сызықтық өрнектер және оларды түрлендіру", "ru": "Линейные выражения и их преобразование", "en": "Linear expressions and their transformation" } },
+
+    { "id": "linear_equations", "grade": 7, "subject": "math", "prerequisites": ["linear_expressions"],
+      "title": { "kk": "Бір айнымалысы бар сызықтық теңдеулер", "ru": "Линейные уравнения с одной переменной", "en": "Linear equations in one variable" } },
+
+    { "id": "monomials", "grade": 7, "subject": "math", "prerequisites": ["linear_expressions", "powers_natural"],
+      "title": { "kk": "Бірмүшелер және оларға амалдар қолдану", "ru": "Одночлены и действия с ними", "en": "Monomials and operations with them" } },
+
+    { "id": "polynomials", "grade": 7, "subject": "math", "prerequisites": ["monomials"],
+      "title": { "kk": "Көпмүшелер: қосу және азайту", "ru": "Многочлены: сложение и вычитание", "en": "Polynomials: addition and subtraction" } },
+
+    { "id": "polynomial_multiply", "grade": 7, "subject": "math", "prerequisites": ["polynomials"],
+      "title": { "kk": "Көпмүшелерді көбейту", "ru": "Умножение многочленов", "en": "Multiplying polynomials" } },
+
+    { "id": "abbreviated_multiplication", "grade": 7, "subject": "math", "prerequisites": ["polynomial_multiply"],
+      "title": { "kk": "Қысқаша көбейту формулалары", "ru": "Формулы сокращённого умножения", "en": "Special product formulas" } },
+
+    { "id": "factorization", "grade": 7, "subject": "math", "prerequisites": ["abbreviated_multiplication"],
+      "title": { "kk": "Көпмүшені көбейткіштерге жіктеу", "ru": "Разложение многочлена на множители", "en": "Factoring polynomials" } },
+
+    { "id": "integer_powers", "grade": 7, "subject": "math", "prerequisites": ["powers_natural", "rational_operations"],
+      "title": { "kk": "Бүтін көрсеткішті дәреже", "ru": "Степень с целым показателем", "en": "Powers with integer exponents" } },
+
+    { "id": "standard_form_numbers", "grade": 7, "subject": "math", "prerequisites": ["integer_powers"],
+      "title": { "kk": "Санның стандарт түрі", "ru": "Стандартный вид числа", "en": "Standard form of a number" } },
+
+    { "id": "function_concept", "grade": 7, "subject": "math", "prerequisites": ["coordinate_plane"],
+      "title": { "kk": "Функция, анықталу облысы, графигі", "ru": "Функция, область определения, график", "en": "Function, domain, graph" } },
+
+    { "id": "linear_function", "grade": 7, "subject": "math", "prerequisites": ["function_concept", "linear_expressions"],
+      "title": { "kk": "Сызықтық функция және оның графигі", "ru": "Линейная функция и её график", "en": "Linear function and its graph" } },
+
+    { "id": "linear_function_graphs", "grade": 7, "subject": "math", "prerequisites": ["linear_function"],
+      "title": { "kk": "Сызықтық функциялар графиктерінің өзара орналасуы", "ru": "Взаимное расположение графиков линейных функций", "en": "Relative position of linear function graphs" } },
+
+    { "id": "word_problems_equations", "grade": 7, "subject": "math", "prerequisites": ["linear_equations", "text_problems_arithmetic"],
+      "title": { "kk": "Теңдеу құру арқылы мәтінді есептер шығару", "ru": "Текстовые задачи, решаемые составлением уравнения", "en": "Word problems solved by setting up an equation" } },
+
+    { "id": "triangles_basic", "grade": 7, "subject": "math", "prerequisites": ["angle_measure"],
+      "title": { "kk": "Үшбұрыш, теңдік белгілері", "ru": "Треугольник и признаки равенства треугольников", "en": "Triangle and congruence criteria" } },
+
+    { "id": "parallel_lines", "grade": 7, "subject": "math", "prerequisites": ["angle_measure"],
+      "title": { "kk": "Параллель түзулер және қиюшы кезіндегі бұрыштар", "ru": "Параллельные прямые и углы при секущей", "en": "Parallel lines and angles with a transversal" } },
+
+    { "id": "triangle_angles_sum", "grade": 7, "subject": "math", "prerequisites": ["triangles_basic", "parallel_lines"],
+      "title": { "kk": "Үшбұрыш бұрыштарының қосындысы", "ru": "Сумма углов треугольника", "en": "Sum of the angles of a triangle" } },
+
+    { "id": "isosceles_triangle", "grade": 7, "subject": "math", "prerequisites": ["triangle_angles_sum"],
+      "title": { "kk": "Теңбүйірлі үшбұрыш", "ru": "Равнобедренный треугольник и его свойства", "en": "Isosceles triangle and its properties" } },
+
+    { "id": "statistics_basic", "grade": 7, "subject": "math", "prerequisites": ["average_value", "data_tables_basic"],
+      "title": { "kk": "Мода, медиана, ауқым", "ru": "Мода, медиана, размах", "en": "Mode, median, range" } },
+
+    { "id": "linear_equations_systems", "grade": 8, "subject": "math", "prerequisites": ["linear_equations"],
+      "title": { "kk": "Сызықтық теңдеулер жүйесі және мәтінді есептер", "ru": "Системы линейных уравнений и текстовые задачи", "en": "Systems of linear equations and word problems" } },
+
+    { "id": "algebraic_fractions", "grade": 8, "subject": "math", "prerequisites": ["factorization", "frac_operations"],
+      "title": { "kk": "Алгебралық бөлшектер: қысқарту", "ru": "Алгебраические дроби: сокращение", "en": "Algebraic fractions: simplification" } },
+
+    { "id": "algebraic_fractions_operations", "grade": 8, "subject": "math", "prerequisites": ["algebraic_fractions", "frac_common_denom"],
+      "title": { "kk": "Алгебралық бөлшектерге амалдар қолдану", "ru": "Действия с алгебраическими дробями", "en": "Operations with algebraic fractions" } },
+
+    { "id": "square_root", "grade": 8, "subject": "math", "prerequisites": ["integer_powers", "rational_operations"],
+      "title": { "kk": "Квадрат түбір", "ru": "Квадратный корень", "en": "Square root" } },
+
+    { "id": "sqrt_properties", "grade": 8, "subject": "math", "prerequisites": ["square_root"],
+      "title": { "kk": "Квадрат түбірдің қасиеттері және түрлендірулер", "ru": "Свойства квадратного корня и преобразование выражений", "en": "Properties of square roots and expression transformation" } },
+
+    { "id": "quadratic_equations", "grade": 8, "subject": "math", "prerequisites": ["sqrt_properties", "abbreviated_multiplication", "linear_equations"],
+      "title": { "kk": "Квадрат теңдеулер және дискриминант", "ru": "Квадратные уравнения и дискриминант", "en": "Quadratic equations and the discriminant" } },
+
+    { "id": "vieta_theorem", "grade": 8, "subject": "math", "prerequisites": ["quadratic_equations"],
+      "title": { "kk": "Виет теоремасы", "ru": "Теорема Виета", "en": "Vieta's theorem" } },
+
+    { "id": "quadratic_function", "grade": 8, "subject": "math", "prerequisites": ["quadratic_equations", "function_concept"],
+      "title": { "kk": "Квадраттық функция және парабола", "ru": "Квадратичная функция и парабола", "en": "Quadratic function and the parabola" } },
+
+    { "id": "inequalities_linear", "grade": 8, "subject": "math", "prerequisites": ["linear_equations", "rational_operations"],
+      "title": { "kk": "Сызықтық теңсіздіктер және сандық аралықтар", "ru": "Линейные неравенства и числовые промежутки", "en": "Linear inequalities and number intervals" } },
+
+    { "id": "inequality_systems", "grade": 8, "subject": "math", "prerequisites": ["inequalities_linear"],
+      "title": { "kk": "Сызықтық теңсіздіктер жүйесі", "ru": "Системы линейных неравенств", "en": "Systems of linear inequalities" } },
+
+    { "id": "pythagorean_theorem", "grade": 8, "subject": "math", "prerequisites": ["square_root", "triangles_basic"],
+      "title": { "kk": "Пифагор теоремасы", "ru": "Теорема Пифагора", "en": "The Pythagorean theorem" } },
+
+    { "id": "similar_triangles", "grade": 8, "subject": "math", "prerequisites": ["proportion", "triangle_angles_sum"],
+      "title": { "kk": "Үшбұрыштардың ұқсастығы", "ru": "Подобие треугольников", "en": "Similar triangles" } },
+
+    { "id": "quadrilaterals", "grade": 8, "subject": "math", "prerequisites": ["parallel_lines", "triangle_angles_sum"],
+      "title": { "kk": "Төртбұрыштар: параллелограмм, ромб, трапеция", "ru": "Четырёхугольники: параллелограмм, ромб, трапеция", "en": "Quadrilaterals: parallelogram, rhombus, trapezoid" } },
+
+    { "id": "area_polygons", "grade": 8, "subject": "math", "prerequisites": ["quadrilaterals", "perimeter_area_basic"],
+      "title": { "kk": "Көпбұрыштардың аудандары", "ru": "Площади многоугольников", "en": "Areas of polygons" } },
+
+    { "id": "trigonometry_intro", "grade": 8, "subject": "math", "prerequisites": ["similar_triangles", "pythagorean_theorem"],
+      "title": { "kk": "Сүйір бұрыштың синусы, косинусы, тангенсі", "ru": "Синус, косинус и тангенс острого угла", "en": "Sine, cosine and tangent of an acute angle" } },
+
+    { "id": "rational_equations", "grade": 8, "subject": "math", "prerequisites": ["algebraic_fractions_operations", "quadratic_equations"],
+      "title": { "kk": "Бөлшек-рационал теңдеулер", "ru": "Дробно-рациональные уравнения", "en": "Rational equations" } },
+
+    { "id": "word_problems_systems", "grade": 8, "subject": "math", "prerequisites": ["linear_equations_systems", "word_problems_equations"],
+      "title": { "kk": "Жүйе құруға берілген мәтінді есептер", "ru": "Текстовые задачи, решаемые системой уравнений", "en": "Word problems solved with systems of equations" } },
+
+    { "id": "statistics_grouped", "grade": 8, "subject": "math", "prerequisites": ["statistics_basic", "percent_problems"],
+      "title": { "kk": "Деректерді жинау, топтастыру және гистограммалар", "ru": "Сбор и группировка данных, гистограммы", "en": "Data collection, grouping and histograms" } },
+
+    { "id": "probability_classic", "grade": 8, "subject": "math", "prerequisites": ["probability_intro", "statistics_basic"],
+      "title": { "kk": "Ықтималдықтың классикалық анықтамасы", "ru": "Классическое определение вероятности", "en": "Classical definition of probability" } }
+  ]
+}

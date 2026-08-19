@@ -1,0 +1,3650 @@
+{
+  "version": "2026.08.19",
+  "note": "Задания по узлам графа. Полное покрытие (3+ задания, разбор каждого дистрактора) — 8 узлов позвоночника и 15 узлов с наивысшей centrality. Остальные 52 узла — по 1 заданию. Пары long/short через pairId — вход классификатора языкового барьера дня 3. options и misconception языконезависимы (ru), text локализован на kk/ru/en.",
+  "questions": [
+    {
+      "id": "q_natural_numbers_1",
+      "nodeId": "natural_numbers",
+      "text": {
+        "kk": "Есептеңіз: 4200 : 60",
+        "ru": "Вычислите: 4200 : 60",
+        "en": "Calculate: 4200 ÷ 60"
+      },
+      "options": [
+        "70",
+        "700",
+        "7",
+        "420"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Разделил только на 6 и не убрал лишний ноль из делимого.",
+        "Сократил в делимом два нуля, хотя в делителе только один.",
+        "Разделил на 10 вместо 60."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_natural_numbers_2",
+      "nodeId": "natural_numbers",
+      "text": {
+        "kk": "25 · 4 + 25 · 6 өрнегінің мәнін табыңыз",
+        "ru": "Найдите значение выражения 25 · 4 + 25 · 6",
+        "en": "Find the value of 25 · 4 + 25 · 6"
+      },
+      "options": [
+        "250",
+        "100",
+        "150",
+        "260"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Посчитал только первое произведение и остановился.",
+        "Посчитал только второе произведение и остановился.",
+        "Вынес 25 за скобку верно, но затем прибавил (4 + 6) вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_natural_numbers_pl",
+      "nodeId": "natural_numbers",
+      "pairId": "pair_natural_numbers",
+      "phrasing": "long",
+      "text": {
+        "kk": "Мектеп кітапханасына 348 жаңа оқулық әкелінді. Кітапханашы оларды сөрелерге қояды, әр сөреге дәл 12 оқулық сыяды. Әкелінген барлық оқулық неше сөрені алады?",
+        "ru": "В школьную библиотеку привезли 348 новых учебников. Библиотекарь расставляет их по полкам, причём на каждую полку помещается ровно 12 учебников. Сколько полок займут все привезённые учебники?",
+        "en": "A school library received 348 new textbooks. The librarian puts them on shelves, and exactly 12 textbooks fit on each shelf. How many shelves will all the textbooks take?"
+      },
+      "options": [
+        "29",
+        "26",
+        "34",
+        "39"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Ошибся при подборе неполного частного.",
+        "Разделил на 10 вместо 12 и округлил результат.",
+        "Переставил цифры в частном."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_natural_numbers_ps",
+      "nodeId": "natural_numbers",
+      "pairId": "pair_natural_numbers",
+      "phrasing": "short",
+      "text": {
+        "kk": "348 : 12 = ?",
+        "ru": "348 : 12 = ?",
+        "en": "348 ÷ 12 = ?"
+      },
+      "options": [
+        "29",
+        "26",
+        "34",
+        "39"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Ошибся при подборе неполного частного.",
+        "Разделил на 10 вместо 12 и округлил результат.",
+        "Переставил цифры в частном."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_fractions_basic_1",
+      "nodeId": "fractions_basic",
+      "text": {
+        "kk": "Қай бөлшек үлкен: 3/7 әлде 5/7?",
+        "ru": "Какая дробь больше: 3/7 или 5/7?",
+        "en": "Which fraction is greater: 3/7 or 5/7?"
+      },
+      "options": [
+        "5/7",
+        "3/7",
+        "они равны",
+        "сравнить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считает, что чем меньше числитель, тем больше доля.",
+        "Не различает дроби с одинаковым знаменателем.",
+        "Не знает правила сравнения дробей с равными знаменателями."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_fractions_basic_2",
+      "nodeId": "fractions_basic",
+      "text": {
+        "kk": "Қай бөлшек үлкен: 2/5 әлде 2/9?",
+        "ru": "Какая дробь больше: 2/5 или 2/9?",
+        "en": "Which fraction is greater: 2/5 or 2/9?"
+      },
+      "options": [
+        "2/5",
+        "2/9",
+        "они равны",
+        "сравнить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перенёс правило сравнения натуральных чисел на знаменатель: 9 > 5, значит дробь больше.",
+        "Считает, что при равных числителях дроби равны.",
+        "Не знает правила сравнения дробей с равными числителями."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_fractions_basic_pl",
+      "nodeId": "fractions_basic",
+      "pairId": "pair_fractions_basic",
+      "phrasing": "long",
+      "text": {
+        "kk": "Айгүл кітаптың 3/8 бөлігін оқыды, ал Дәурен дәл сондай кітаптың 2/5 бөлігін оқыды. Осы екі бөліктің қайсысы үлкен?",
+        "ru": "Айгуль прочитала 3/8 книги, а Даурен — 2/5 такой же книги. Какая из этих двух частей книги больше?",
+        "en": "Aigul read 3/8 of a book, and Dauren read 2/5 of the same book. Which of these two parts is larger?"
+      },
+      "options": [
+        "2/5",
+        "3/8",
+        "они равны",
+        "определить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сравнил дроби по числителям (3 > 2), не приводя их к общему знаменателю.",
+        "Решил, что дроби с разными знаменателями всегда равнозначны.",
+        "Считает, что дроби с разными знаменателями сравнить невозможно."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_fractions_basic_ps",
+      "nodeId": "fractions_basic",
+      "pairId": "pair_fractions_basic",
+      "phrasing": "short",
+      "text": {
+        "kk": "Қайсысы үлкен: 3/8 әлде 2/5?",
+        "ru": "Что больше: 3/8 или 2/5?",
+        "en": "Which is greater: 3/8 or 2/5?"
+      },
+      "options": [
+        "2/5",
+        "3/8",
+        "они равны",
+        "сравнить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сравнил по числителям (3 > 2), не приводя дроби к общему знаменателю.",
+        "Решил, что дроби с разными знаменателями равнозначны.",
+        "Считает, что дроби с разными знаменателями сравнить невозможно."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_frac_common_denom_1",
+      "nodeId": "frac_common_denom",
+      "text": {
+        "kk": "3/4 және 5/6 бөлшектерінің ең кіші ортақ бөлімі неге тең?",
+        "ru": "Чему равен наименьший общий знаменатель дробей 3/4 и 5/6?",
+        "en": "What is the least common denominator of 3/4 and 5/6?"
+      },
+      "options": [
+        "12",
+        "24",
+        "10",
+        "6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил знаменатели, не найдя наименьшее общее кратное.",
+        "Сложил знаменатели вместо поиска общего кратного.",
+        "Взял больший знаменатель, не проверив, делится ли он на 4."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_common_denom_2",
+      "nodeId": "frac_common_denom",
+      "text": {
+        "kk": "2/3 бөлшегіне тең, бөлімі 15 болатын бөлшекті табыңыз",
+        "ru": "Какая дробь со знаменателем 15 равна дроби 2/3?",
+        "en": "Which fraction with denominator 15 equals 2/3?"
+      },
+      "options": [
+        "10/15",
+        "2/15",
+        "5/15",
+        "6/15"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил только знаменатель, а числитель оставил без изменения.",
+        "Прибавил к числителю и знаменателю одно и то же число вместо умножения.",
+        "Умножил числитель на 3, а знаменатель на 5."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_frac_common_denom_pl",
+      "nodeId": "frac_common_denom",
+      "pairId": "pair_frac_common_denom",
+      "phrasing": "long",
+      "text": {
+        "kk": "Сыныпты безендіру үшін Азамат лента сатып алды. Гирляндаға лентаның 1/6 бөлігін, ал жақтауларға 3/8 бөлігін жұмсады. Осы екі бөлікті қосу үшін бөлшектерді ортақ бөлімге келтіру керек. Ең кіші ортақ бөлім қандай?",
+        "ru": "Для оформления класса Азамат купил ленту. На гирлянду он потратил 1/6 ленты, а на рамки — 3/8 ленты. Чтобы сложить эти две части, дроби нужно привести к общему знаменателю. Какой наименьший общий знаменатель нужно взять?",
+        "en": "Azamat bought ribbon to decorate the classroom. He used 1/6 of it for a garland and 3/8 for frames. To add these parts, the fractions must share a denominator. What is the least common denominator?"
+      },
+      "options": [
+        "24",
+        "48",
+        "14",
+        "12"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил 6 · 8, не проверив меньшие общие кратные.",
+        "Сложил знаменатели вместо поиска общего кратного.",
+        "Взял 12: оно делится на 6, но не делится на 8."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_common_denom_ps",
+      "nodeId": "frac_common_denom",
+      "pairId": "pair_frac_common_denom",
+      "phrasing": "short",
+      "text": {
+        "kk": "ЕКОЕ(6; 8) = ?",
+        "ru": "НОК(6; 8) = ?",
+        "en": "LCM(6, 8) = ?"
+      },
+      "options": [
+        "24",
+        "48",
+        "14",
+        "12"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил 6 · 8, не проверив меньшие общие кратные.",
+        "Сложил числа вместо поиска общего кратного.",
+        "Взял 12: оно делится на 6, но не делится на 8."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_operations_1",
+      "nodeId": "frac_operations",
+      "text": {
+        "kk": "1/2 + 1/3 = ?",
+        "ru": "1/2 + 1/3 = ?",
+        "en": "1/2 + 1/3 = ?"
+      },
+      "options": [
+        "5/6",
+        "2/5",
+        "1/5",
+        "2/6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил отдельно числители и отдельно знаменатели — самая частая ошибка на этом узле.",
+        "Сложил знаменатели, а числитель оставил равным 1.",
+        "Привёл дроби к знаменателю 6, но не пересчитал числители."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_operations_2",
+      "nodeId": "frac_operations",
+      "text": {
+        "kk": "3/4 : 2/5 = ?",
+        "ru": "3/4 : 2/5 = ?",
+        "en": "3/4 ÷ 2/5 = ?"
+      },
+      "options": [
+        "15/8",
+        "6/20",
+        "8/15",
+        "20/6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил на делитель, не заменив его обратной дробью.",
+        "Перевернул делимое вместо делителя.",
+        "Перевернул обе дроби."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_operations_pl",
+      "nodeId": "frac_operations",
+      "pairId": "pair_frac_operations",
+      "phrasing": "long",
+      "text": {
+        "kk": "Сынып мектеп жобасына қаражат жинайды. Бірінші күні қажетті соманың 2/5 бөлігін, екінші күні тағы 1/3 бөлігін жинады. Екі күнде қажетті соманың қандай бөлігі жиналды?",
+        "ru": "Класс собирает средства на школьный проект. В первый день собрали 2/5 нужной суммы, во второй день — ещё 1/3 нужной суммы. Какую часть нужной суммы собрали за два дня?",
+        "en": "A class is raising money for a school project. On the first day they collected 2/5 of the target, on the second day another 1/3. What part of the target did they collect in two days?"
+      },
+      "options": [
+        "11/15",
+        "3/8",
+        "3/15",
+        "2/15"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил отдельно числители и отдельно знаменатели.",
+        "Привёл дроби к знаменателю 15, но сложил исходные числители, не пересчитав их.",
+        "Перемножил дроби вместо сложения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_frac_operations_ps",
+      "nodeId": "frac_operations",
+      "pairId": "pair_frac_operations",
+      "phrasing": "short",
+      "text": {
+        "kk": "2/5 + 1/3 = ?",
+        "ru": "2/5 + 1/3 = ?",
+        "en": "2/5 + 1/3 = ?"
+      },
+      "options": [
+        "11/15",
+        "3/8",
+        "3/15",
+        "2/15"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил отдельно числители и отдельно знаменатели.",
+        "Привёл дроби к знаменателю 15, но сложил исходные числители.",
+        "Перемножил дроби вместо сложения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_negative_numbers_1",
+      "nodeId": "negative_numbers",
+      "text": {
+        "kk": "−7 + 12 = ?",
+        "ru": "−7 + 12 = ?",
+        "en": "−7 + 12 = ?"
+      },
+      "options": [
+        "5",
+        "−5",
+        "19",
+        "−19"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Вычел модули верно, но взял знак меньшего по модулю числа.",
+        "Сложил модули, отбросив знак минус.",
+        "Сложил модули и сохранил знак минус."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_negative_numbers_2",
+      "nodeId": "negative_numbers",
+      "text": {
+        "kk": "−8 − (−3) = ?",
+        "ru": "−8 − (−3) = ?",
+        "en": "−8 − (−3) = ?"
+      },
+      "options": [
+        "−5",
+        "−11",
+        "11",
+        "5"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не заменил вычитание отрицательного числа на сложение.",
+        "Потерял оба знака и сложил модули.",
+        "Нашёл верный модуль, но потерял знак минус."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_negative_numbers_pl",
+      "nodeId": "negative_numbers",
+      "pairId": "pair_negative_numbers",
+      "phrasing": "long",
+      "text": {
+        "kk": "Түнде Астанада температура −18 °C-қа дейін төмендеді, ал түсте −4 °C-қа дейін көтерілді. Осы уақыт ішінде температура неше градусқа жоғарылады?",
+        "ru": "Ночью в Астане температура опустилась до −18 °C, а к полудню поднялась до −4 °C. На сколько градусов повысилась температура за это время?",
+        "en": "At night the temperature in Astana dropped to −18 °C, and by noon it rose to −4 °C. By how many degrees did the temperature rise?"
+      },
+      "options": [
+        "14",
+        "22",
+        "−14",
+        "−22"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил модули вместо вычитания.",
+        "Нашёл верный модуль, но перепутал направление изменения.",
+        "Сложил модули и оставил знак минус."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_negative_numbers_ps",
+      "nodeId": "negative_numbers",
+      "pairId": "pair_negative_numbers",
+      "phrasing": "short",
+      "text": {
+        "kk": "−4 − (−18) = ?",
+        "ru": "−4 − (−18) = ?",
+        "en": "−4 − (−18) = ?"
+      },
+      "options": [
+        "14",
+        "22",
+        "−14",
+        "−22"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил модули вместо вычитания.",
+        "Нашёл верный модуль, но перепутал знак результата.",
+        "Сложил модули и оставил знак минус."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_linear_expressions_1",
+      "nodeId": "linear_expressions",
+      "text": {
+        "kk": "Ықшамдаңыз: 3(x + 4) − 2x",
+        "ru": "Упростите выражение: 3(x + 4) − 2x",
+        "en": "Simplify: 3(x + 4) − 2x"
+      },
+      "options": [
+        "x + 12",
+        "x + 4",
+        "5x + 12",
+        "x + 7"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил на 3 только x, а слагаемое 4 оставил без изменения.",
+        "Прибавил 2x вместо вычитания.",
+        "Сложил 3 и 4 вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_linear_expressions_2",
+      "nodeId": "linear_expressions",
+      "text": {
+        "kk": "Ұқсас мүшелерді біріктіріңіз: 5a − 3b − 8a + b",
+        "ru": "Приведите подобные слагаемые: 5a − 3b − 8a + b",
+        "en": "Collect like terms: 5a − 3b − 8a + b"
+      },
+      "options": [
+        "−3a − 2b",
+        "−3a + 2b",
+        "13a − 2b",
+        "−3a − 4b"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Ошибся в знаке при b: −3b + b даёт −2b, а не +2b.",
+        "Сложил 5a и 8a, не учтя знак минус.",
+        "Вычел b вместо прибавления."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_linear_expressions_pl",
+      "nodeId": "linear_expressions",
+      "pairId": "pair_linear_expressions",
+      "phrasing": "long",
+      "text": {
+        "kk": "Мектеп дүкенінде дәптер x теңге тұрады, ал қалам дәптерден 30 теңгеге қымбат. Әсел 4 дәптер мен 2 қалам сатып алды. Сатып алудың жалпы құнын қандай өрнек береді?",
+        "ru": "В школьном киоске тетрадь стоит x тенге, а ручка — на 30 тенге дороже тетради. Асель купила 4 тетради и 2 ручки. Какое выражение задаёт стоимость всей покупки в тенге?",
+        "en": "In a school shop a notebook costs x tenge, and a pen costs 30 tenge more. Asel bought 4 notebooks and 2 pens. Which expression gives the total cost in tenge?"
+      },
+      "options": [
+        "6x + 60",
+        "6x + 30",
+        "4x + 60",
+        "6x + 120"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил на 2 только x, а 30 не умножил.",
+        "Потерял стоимость двух ручек в части с переменной.",
+        "Умножил 30 на 4 вместо 2."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_expressions_ps",
+      "nodeId": "linear_expressions",
+      "pairId": "pair_linear_expressions",
+      "phrasing": "short",
+      "text": {
+        "kk": "Ықшамдаңыз: 4x + 2(x + 30)",
+        "ru": "Упростите: 4x + 2(x + 30)",
+        "en": "Simplify: 4x + 2(x + 30)"
+      },
+      "options": [
+        "6x + 60",
+        "6x + 30",
+        "4x + 60",
+        "6x + 120"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил на 2 только x, а 30 не умножил.",
+        "Не сложил 4x и 2x.",
+        "Умножил 30 на 4 вместо 2."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_equations_1",
+      "nodeId": "linear_equations",
+      "text": {
+        "kk": "Теңдеуді шешіңіз: 5x − 8 = 2x + 7",
+        "ru": "Решите уравнение: 5x − 8 = 2x + 7",
+        "en": "Solve the equation: 5x − 8 = 2x + 7"
+      },
+      "options": [
+        "5",
+        "15",
+        "−1/3",
+        "−5"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Получил 3x = 15, но не разделил обе части на 3.",
+        "Перенёс слагаемые через знак равенства, не поменяв их знаки.",
+        "Потерял знак при делении."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_equations_2",
+      "nodeId": "linear_equations",
+      "text": {
+        "kk": "Теңдеуді шешіңіз: 2(x − 3) = 4",
+        "ru": "Решите уравнение: 2(x − 3) = 4",
+        "en": "Solve the equation: 2(x − 3) = 4"
+      },
+      "options": [
+        "5",
+        "2",
+        "3,5",
+        "−5"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Разделил обе части на 2, получил x − 3 = 2 и записал 2 как ответ, не прибавив 3.",
+        "Раскрыл скобки как 2x − 3: умножил на 2 только x.",
+        "Перепутал знак при переносе слагаемого."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_equations_pl",
+      "nodeId": "linear_equations",
+      "pairId": "pair_linear_equations",
+      "phrasing": "long",
+      "text": {
+        "kk": "Оқушы бір сан ойлады, оны 4-ке көбейтті және нәтижеден 9-ды алып тастады. 23 саны шықты. Оқушы қандай санды ойлады?",
+        "ru": "Ученик задумал число, умножил его на 4 и вычел из результата 9. Получилось 23. Какое число он задумал?",
+        "en": "A student thought of a number, multiplied it by 4 and subtracted 9. The result was 23. What number did the student think of?"
+      },
+      "options": [
+        "8",
+        "3,5",
+        "32",
+        "14"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Выполнил действия в том же порядке, что в условии, вместо обратных: (23 − 9) : 4.",
+        "Прибавил 9 к 23, но не разделил на 4.",
+        "Посчитал 23 − 9 и остановился на первом шаге."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_equations_ps",
+      "nodeId": "linear_equations",
+      "pairId": "pair_linear_equations",
+      "phrasing": "short",
+      "text": {
+        "kk": "Теңдеуді шешіңіз: 4x − 9 = 23",
+        "ru": "Решите уравнение: 4x − 9 = 23",
+        "en": "Solve the equation: 4x − 9 = 23"
+      },
+      "options": [
+        "8",
+        "3,5",
+        "32",
+        "14"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Разделил на 4 до того, как перенёс 9, — нарушен порядок обратных действий.",
+        "Прибавил 9 к 23, но не разделил на 4.",
+        "Посчитал 23 − 9 и остановился."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_equations_systems_1",
+      "nodeId": "linear_equations_systems",
+      "text": {
+        "kk": "Жүйені шешіңіз: x + y = 10, x − y = 4",
+        "ru": "Решите систему: x + y = 10, x − y = 4",
+        "en": "Solve the system: x + y = 10, x − y = 4"
+      },
+      "options": [
+        "x = 7, y = 3",
+        "x = 3, y = 7",
+        "x = 7, y = 4",
+        "x = 6, y = 4"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перепутал переменные местами при обратной подстановке.",
+        "Нашёл x верно, а y взял из правой части второго уравнения.",
+        "Ошибся при сложении уравнений."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_linear_equations_systems_2",
+      "nodeId": "linear_equations_systems",
+      "text": {
+        "kk": "y = 2x + 1, y = 2x − 3 жүйесінің неше шешімі бар?",
+        "ru": "Сколько решений имеет система y = 2x + 1, y = 2x − 3?",
+        "en": "How many solutions does the system y = 2x + 1, y = 2x − 3 have?"
+      },
+      "options": [
+        "ни одного",
+        "одно",
+        "бесконечно много",
+        "два"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не сравнил угловые коэффициенты: прямые параллельны и не пересекаются.",
+        "Решил, что одинаковый коэффициент при x означает совпадение прямых.",
+        "Перенёс на систему свойство квадратного уравнения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_linear_equations_systems_pl",
+      "nodeId": "linear_equations_systems",
+      "pairId": "pair_linear_equations_systems",
+      "phrasing": "long",
+      "text": {
+        "kk": "Мектеп командасында 12 адам — ұлдар мен қыздар. Ұлдар қыздардан 4-еу артық. Командада неше қыз бар?",
+        "ru": "В школьной команде 12 человек — юноши и девушки. Юношей на 4 больше, чем девушек. Сколько девушек в команде?",
+        "en": "A school team has 12 members — boys and girls. There are 4 more boys than girls. How many girls are on the team?"
+      },
+      "options": [
+        "4",
+        "8",
+        "6",
+        "16"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл число юношей, а не девушек: ответил не на тот вопрос.",
+        "Разделил 12 пополам, не учтя разницу в 4 человека.",
+        "Сложил 12 и 4 вместо составления системы."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_linear_equations_systems_ps",
+      "nodeId": "linear_equations_systems",
+      "pairId": "pair_linear_equations_systems",
+      "phrasing": "short",
+      "text": {
+        "kk": "x + y = 12, x − y = 4. y-ті табыңыз.",
+        "ru": "x + y = 12, x − y = 4. Найдите y.",
+        "en": "x + y = 12, x − y = 4. Find y."
+      },
+      "options": [
+        "4",
+        "8",
+        "6",
+        "16"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл x вместо y.",
+        "Разделил 12 пополам, не учтя второе уравнение.",
+        "Сложил 12 и 4."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_square_root_1",
+      "nodeId": "square_root",
+      "text": {
+        "kk": "√144 = ?",
+        "ru": "√144 = ?",
+        "en": "√144 = ?"
+      },
+      "options": [
+        "12",
+        "72",
+        "14",
+        "24"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Разделил 144 на 2 вместо извлечения корня.",
+        "Подобрал корень «на глаз» по первым цифрам, не проверив умножением.",
+        "Извлёк корень верно, но затем умножил результат на 2."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_square_root_2",
+      "nodeId": "square_root",
+      "text": {
+        "kk": "√(25 · 9) = ?",
+        "ru": "√(25 · 9) = ?",
+        "en": "√(25 · 9) = ?"
+      },
+      "options": [
+        "15",
+        "34",
+        "225",
+        "8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил подкоренные числа вместо умножения корней.",
+        "Перемножил подкоренные числа, но не извлёк корень.",
+        "Извлёк оба корня верно, но сложил их вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_square_root_3",
+      "nodeId": "square_root",
+      "text": {
+        "kk": "√49 − √16 өрнегінің мәні неге тең?",
+        "ru": "Чему равно значение выражения √49 − √16?",
+        "en": "What is the value of √49 − √16?"
+      },
+      "options": [
+        "3",
+        "√33",
+        "5,7",
+        "33"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Вычел подкоренные выражения: корень из разности не равен разности корней.",
+        "То же заблуждение, доведённое до числа: √33 ≈ 5,7.",
+        "Вычел подкоренные числа и вовсе потерял знак корня."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_decimal_basic_1",
+      "nodeId": "decimal_basic",
+      "text": {
+        "kk": "Қай сан үлкен: 0,7 әлде 0,25?",
+        "ru": "Какое число больше: 0,7 или 0,25?",
+        "en": "Which number is greater: 0.7 or 0.25?"
+      },
+      "options": [
+        "0,7",
+        "0,25",
+        "они равны",
+        "сравнить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сравнил дробные части как натуральные числа: 25 > 7.",
+        "Не различает числа с разным количеством знаков после запятой.",
+        "Не знает правила сравнения десятичных дробей поразрядно."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_decimal_basic_2",
+      "nodeId": "decimal_basic",
+      "text": {
+        "kk": "0,4 санында неше жүздік бар?",
+        "ru": "Сколько сотых в числе 0,4?",
+        "en": "How many hundredths are there in 0.4?"
+      },
+      "options": [
+        "40",
+        "4",
+        "0,04",
+        "400"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Прочитал первую цифру после запятой как число сотых.",
+        "Перевёл в обратную сторону, разделив вместо умножения.",
+        "Перепутал разряд сотых с разрядом тысячных."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_decimal_basic_3",
+      "nodeId": "decimal_basic",
+      "text": {
+        "kk": "Қай сан 3,1 мен 3,2 арасында жатыр?",
+        "ru": "Какое число лежит между 3,1 и 3,2?",
+        "en": "Which number lies between 3.1 and 3.2?"
+      },
+      "options": [
+        "3,15",
+        "3,05",
+        "3,25",
+        "3,3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Взял число левее интервала.",
+        "Взял число правее интервала.",
+        "Считает, что между соседними десятыми нет других чисел, и выбрал ближайшую десятую."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_order_of_operations_1",
+      "nodeId": "order_of_operations",
+      "text": {
+        "kk": "12 + 4 · 3 = ?",
+        "ru": "12 + 4 · 3 = ?",
+        "en": "12 + 4 · 3 = ?"
+      },
+      "options": [
+        "24",
+        "48",
+        "36",
+        "19"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считал слева направо: сначала сложил 12 и 4, потом умножил на 3.",
+        "Умножил 12 на 3, потеряв слагаемое 4.",
+        "Сложил все три числа, проигнорировав знак умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_order_of_operations_2",
+      "nodeId": "order_of_operations",
+      "text": {
+        "kk": "(18 − 6) : 3 + 5 = ?",
+        "ru": "(18 − 6) : 3 + 5 = ?",
+        "en": "(18 − 6) ÷ 3 + 5 = ?"
+      },
+      "options": [
+        "9",
+        "1,5",
+        "21",
+        "4"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Выполнил сложение раньше деления: 12 : (3 + 5).",
+        "Проигнорировал скобки: 18 − 6 : 3 + 5.",
+        "Дошёл до деления и не прибавил 5."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_order_of_operations_3",
+      "nodeId": "order_of_operations",
+      "text": {
+        "kk": "2 + 2 · 2² = ?",
+        "ru": "2 + 2 · 2² = ?",
+        "en": "2 + 2 · 2² = ?"
+      },
+      "options": [
+        "10",
+        "16",
+        "18",
+        "6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил раньше умножения: (2 + 2) · 2².",
+        "Возвёл в квадрат произведение 2 · 2, а не только последний множитель.",
+        "Проигнорировал степень и посчитал 2 + 2 · 2."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_monomials_1",
+      "nodeId": "monomials",
+      "text": {
+        "kk": "Ықшамдаңыз: 3a² · 4a³",
+        "ru": "Упростите: 3a² · 4a³",
+        "en": "Simplify: 3a² · 4a³"
+      },
+      "options": [
+        "12a⁵",
+        "12a⁶",
+        "7a⁵",
+        "7a⁶"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил показатели степеней вместо сложения.",
+        "Сложил коэффициенты вместо умножения.",
+        "Сложил коэффициенты и перемножил показатели — обе ошибки сразу."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_monomials_2",
+      "nodeId": "monomials",
+      "text": {
+        "kk": "(2x³)² = ?",
+        "ru": "(2x³)² = ?",
+        "en": "(2x³)² = ?"
+      },
+      "options": [
+        "4x⁶",
+        "2x⁶",
+        "4x⁵",
+        "2x⁵"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не возвёл коэффициент 2 в квадрат.",
+        "Сложил показатели вместо умножения.",
+        "Не возвёл коэффициент и сложил показатели."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_monomials_3",
+      "nodeId": "monomials",
+      "text": {
+        "kk": "−5x²y³ бірмүшесінің дәрежесі неге тең?",
+        "ru": "Чему равна степень одночлена −5x²y³?",
+        "en": "What is the degree of the monomial −5x²y³?"
+      },
+      "options": [
+        "5",
+        "6",
+        "3",
+        "2"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил показатели вместо сложения.",
+        "Взял только больший из показателей.",
+        "Взял только показатель при первой переменной."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_numbers_1",
+      "nodeId": "rational_numbers",
+      "text": {
+        "kk": "|−7| = ?",
+        "ru": "|−7| = ?",
+        "en": "|−7| = ?"
+      },
+      "options": [
+        "7",
+        "−7",
+        "0",
+        "1/7"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считает, что модуль сохраняет знак числа.",
+        "Путает модуль с расстоянием до самого числа, а не до нуля.",
+        "Путает модуль с обратным числом."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_numbers_2",
+      "nodeId": "rational_numbers",
+      "text": {
+        "kk": "Қай сан үлкен: −3 әлде −8?",
+        "ru": "Какое число больше: −3 или −8?",
+        "en": "Which number is greater: −3 or −8?"
+      },
+      "options": [
+        "−3",
+        "−8",
+        "они равны",
+        "сравнить нельзя"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сравнил числа по модулю, как натуральные: 8 > 3.",
+        "Считает все отрицательные числа равнозначными.",
+        "Не умеет сравнивать отрицательные числа на координатной прямой."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_numbers_3",
+      "nodeId": "rational_numbers",
+      "text": {
+        "kk": "Қай сан рационал сан емес?",
+        "ru": "Какое из чисел не является рациональным?",
+        "en": "Which of these numbers is not rational?"
+      },
+      "options": [
+        "√2",
+        "−4",
+        "0,25",
+        "7/3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считает, что отрицательные числа не относятся к рациональным.",
+        "Считает рациональными только обыкновенные дроби.",
+        "Считает рациональными только целые числа."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_polynomials_1",
+      "nodeId": "polynomials",
+      "text": {
+        "kk": "(3x² + 2x) + (x² − 5x) = ?",
+        "ru": "(3x² + 2x) + (x² − 5x) = ?",
+        "en": "(3x² + 2x) + (x² − 5x) = ?"
+      },
+      "options": [
+        "4x² − 3x",
+        "4x² + 7x",
+        "3x⁴ − 3x",
+        "4x² − 3x²"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил 2x и −5x без учёта знака.",
+        "Перемножил x² вместо сложения коэффициентов.",
+        "Привёл подобные, не различая x² и x."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_polynomials_2",
+      "nodeId": "polynomials",
+      "text": {
+        "kk": "(5a − 3) − (2a − 7) = ?",
+        "ru": "(5a − 3) − (2a − 7) = ?",
+        "en": "(5a − 3) − (2a − 7) = ?"
+      },
+      "options": [
+        "3a + 4",
+        "3a − 10",
+        "7a − 10",
+        "3a − 4"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не поменял знак у −7 при раскрытии скобки с минусом.",
+        "Не поменял ни один знак и сложил многочлены вместо вычитания.",
+        "Поменял знак у скобки, но ошибся в знаке результата."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_polynomials_3",
+      "nodeId": "polynomials",
+      "text": {
+        "kk": "4x³ − x⁵ + 2 көпмүшесінің дәрежесі қандай?",
+        "ru": "Какова степень многочлена 4x³ − x⁵ + 2?",
+        "en": "What is the degree of the polynomial 4x³ − x⁵ + 2?"
+      },
+      "options": [
+        "5",
+        "3",
+        "8",
+        "2"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Взял степень первого члена, не проверив остальные.",
+        "Сложил степени всех членов.",
+        "Взял свободный член вместо степени."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_integer_powers_1",
+      "nodeId": "integer_powers",
+      "text": {
+        "kk": "2⁻³ = ?",
+        "ru": "2⁻³ = ?",
+        "en": "2⁻³ = ?"
+      },
+      "options": [
+        "1/8",
+        "−8",
+        "−6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перенёс знак минус с показателя на результат.",
+        "Умножил основание на показатель.",
+        "Проигнорировал знак показателя."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_integer_powers_2",
+      "nodeId": "integer_powers",
+      "text": {
+        "kk": "a⁵ : a⁵ = ? (a ≠ 0)",
+        "ru": "a⁵ : a⁵ = ? (a ≠ 0)",
+        "en": "a⁵ ÷ a⁵ = ? (a ≠ 0)"
+      },
+      "options": [
+        "1",
+        "0",
+        "a",
+        "a¹⁰"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Получил показатель 0 и решил, что всё выражение равно нулю.",
+        "Сократил степени неверно, оставив основание в первой степени.",
+        "Сложил показатели вместо вычитания."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_integer_powers_3",
+      "nodeId": "integer_powers",
+      "text": {
+        "kk": "(10⁻²)³ = ?",
+        "ru": "(10⁻²)³ = ?",
+        "en": "(10⁻²)³ = ?"
+      },
+      "options": [
+        "10⁻⁶",
+        "10⁻⁵",
+        "10⁶",
+        "10⁻²"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил показатели вместо умножения.",
+        "Потерял знак минус в показателе.",
+        "Не выполнил возведение в степень вообще."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_rational_operations_1",
+      "nodeId": "rational_operations",
+      "text": {
+        "kk": "−0,5 · (−4) = ?",
+        "ru": "−0,5 · (−4) = ?",
+        "en": "−0.5 · (−4) = ?"
+      },
+      "options": [
+        "2",
+        "−2",
+        "−4,5",
+        "0,2"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не учёл, что произведение двух отрицательных чисел положительно.",
+        "Сложил числа вместо умножения.",
+        "Перепутал умножение с делением."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_operations_2",
+      "nodeId": "rational_operations",
+      "text": {
+        "kk": "−3/4 + 1/2 = ?",
+        "ru": "−3/4 + 1/2 = ?",
+        "en": "−3/4 + 1/2 = ?"
+      },
+      "options": [
+        "−1/4",
+        "−5/4",
+        "1/4",
+        "−2/6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил модули вместо вычитания.",
+        "Нашёл верный модуль, но потерял знак минус.",
+        "Сложил отдельно числители и отдельно знаменатели."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_operations_3",
+      "nodeId": "rational_operations",
+      "text": {
+        "kk": "(−2)⁴ = ?",
+        "ru": "(−2)⁴ = ?",
+        "en": "(−2)⁴ = ?"
+      },
+      "options": [
+        "16",
+        "−16",
+        "8",
+        "−8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сохранил знак минус, хотя показатель степени чётный.",
+        "Умножил основание на показатель вместо возведения в степень.",
+        "Умножил основание на показатель и сохранил минус."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_powers_natural_1",
+      "nodeId": "powers_natural",
+      "text": {
+        "kk": "3⁴ = ?",
+        "ru": "3⁴ = ?",
+        "en": "3⁴ = ?"
+      },
+      "options": [
+        "81",
+        "12",
+        "64",
+        "27"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил основание на показатель вместо возведения в степень.",
+        "Поменял местами основание и показатель: посчитал 4³.",
+        "Посчитал 3³, потеряв один множитель."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_powers_natural_2",
+      "nodeId": "powers_natural",
+      "text": {
+        "kk": "2³ · 2² = ?",
+        "ru": "2³ · 2² = ?",
+        "en": "2³ · 2² = ?"
+      },
+      "options": [
+        "2⁵",
+        "2⁶",
+        "4⁵",
+        "2¹"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил показатели вместо сложения.",
+        "Перемножил основания вместе с показателями.",
+        "Вычел показатели вместо сложения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_powers_natural_3",
+      "nodeId": "powers_natural",
+      "text": {
+        "kk": "5⁰ неге тең?",
+        "ru": "Чему равно 5⁰?",
+        "en": "What is 5⁰?"
+      },
+      "options": [
+        "1",
+        "0",
+        "5",
+        "не определено"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считает, что нулевая степень даёт ноль.",
+        "Считает, что степень 0 оставляет число без изменения.",
+        "Путает 5⁰ с неопределённым выражением 0⁰."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_polynomial_multiply_1",
+      "nodeId": "polynomial_multiply",
+      "text": {
+        "kk": "(x + 3)(x − 2) = ?",
+        "ru": "(x + 3)(x − 2) = ?",
+        "en": "(x + 3)(x − 2) = ?"
+      },
+      "options": [
+        "x² + x − 6",
+        "x² − 6",
+        "x² + 5x − 6",
+        "x² − x − 6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перемножил только первые и только вторые члены, потеряв середину.",
+        "Сложил 3x и −2x как 3x + 2x.",
+        "Перепутал знак при сложении 3x и −2x."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_polynomial_multiply_2",
+      "nodeId": "polynomial_multiply",
+      "text": {
+        "kk": "2x(x² − 4) = ?",
+        "ru": "2x(x² − 4) = ?",
+        "en": "2x(x² − 4) = ?"
+      },
+      "options": [
+        "2x³ − 8x",
+        "2x³ − 4",
+        "2x² − 8x",
+        "2x³ − 8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил только первое слагаемое в скобке.",
+        "Сложил показатели неверно при умножении x на x².",
+        "Потерял множитель x во втором слагаемом."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_polynomial_multiply_3",
+      "nodeId": "polynomial_multiply",
+      "text": {
+        "kk": "(x − 5)(x + 2) көбейтіндісінің бос мүшесі неге тең?",
+        "ru": "Чему равен свободный член произведения (x − 5)(x + 2)?",
+        "en": "What is the constant term of (x − 5)(x + 2)?"
+      },
+      "options": [
+        "−10",
+        "−3",
+        "10",
+        "−7"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил −5 и 2 вместо умножения.",
+        "Перемножил верно, но потерял знак минус.",
+        "Вычел 2 из −5."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_sqrt_properties_1",
+      "nodeId": "sqrt_properties",
+      "text": {
+        "kk": "√50 өрнегін ықшамдаңыз",
+        "ru": "Упростите выражение √50",
+        "en": "Simplify √50"
+      },
+      "options": [
+        "5√2",
+        "25√2",
+        "2√5",
+        "10√5"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Вынес 25 из-под корня, не извлекая из него корень.",
+        "Перепутал местами множитель под корнем и вынесенный множитель.",
+        "Разложил 50 как 10 · 5 и вынес не тот множитель."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_sqrt_properties_2",
+      "nodeId": "sqrt_properties",
+      "text": {
+        "kk": "√2 · √8 = ?",
+        "ru": "√2 · √8 = ?",
+        "en": "√2 · √8 = ?"
+      },
+      "options": [
+        "4",
+        "√10",
+        "16",
+        "2√8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил подкоренные числа вместо умножения.",
+        "Перемножил подкоренные числа, но не извлёк корень.",
+        "Вынес множитель, не доведя преобразование до конца."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_sqrt_properties_3",
+      "nodeId": "sqrt_properties",
+      "text": {
+        "kk": "(√5)² = ?",
+        "ru": "(√5)² = ?",
+        "en": "(√5)² = ?"
+      },
+      "options": [
+        "5",
+        "25",
+        "√25",
+        "10"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Возвёл в квадрат подкоренное число, а не весь корень.",
+        "Возвёл в квадрат под корнем, оставив знак корня.",
+        "Умножил на 2 вместо возведения в квадрат."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_abbreviated_multiplication_1",
+      "nodeId": "abbreviated_multiplication",
+      "text": {
+        "kk": "(a + 3)² = ?",
+        "ru": "(a + 3)² = ?",
+        "en": "(a + 3)² = ?"
+      },
+      "options": [
+        "a² + 6a + 9",
+        "a² + 9",
+        "a² + 3a + 9",
+        "a² + 6a + 6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Возвёл в квадрат каждое слагаемое по отдельности, потеряв удвоенное произведение.",
+        "Записал произведение без множителя 2.",
+        "Не возвёл 3 в квадрат, а умножил на 2."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_abbreviated_multiplication_2",
+      "nodeId": "abbreviated_multiplication",
+      "text": {
+        "kk": "(x − 4)(x + 4) = ?",
+        "ru": "(x − 4)(x + 4) = ?",
+        "en": "(x − 4)(x + 4) = ?"
+      },
+      "options": [
+        "x² − 16",
+        "x² + 16",
+        "x² − 8x − 16",
+        "x² − 4"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Потерял знак минус в формуле разности квадратов.",
+        "Не заметил, что средние члены взаимно уничтожаются.",
+        "Не возвёл 4 в квадрат."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_abbreviated_multiplication_3",
+      "nodeId": "abbreviated_multiplication",
+      "text": {
+        "kk": "51² − 49² = ?",
+        "ru": "51² − 49² = ?",
+        "en": "51² − 49² = ?"
+      },
+      "options": [
+        "200",
+        "4",
+        "2601",
+        "100"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Вычел основания и возвёл разность в квадрат.",
+        "Посчитал только 51², не выполнив вычитание.",
+        "Нашёл сумму оснований и остановился, не умножив на разность."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_triangles_basic_1",
+      "nodeId": "triangles_basic",
+      "text": {
+        "kk": "Қабырғалары 3, 4 және 8 болатын үшбұрыш бар ма?",
+        "ru": "Существует ли треугольник со сторонами 3, 4 и 8?",
+        "en": "Does a triangle with sides 3, 4 and 8 exist?"
+      },
+      "options": [
+        "нет, потому что 3 + 4 < 8",
+        "да, существует",
+        "да, если угол между сторонами тупой",
+        "определить нельзя без углов"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не знает неравенства треугольника.",
+        "Считает, что неравенство треугольника зависит от вида угла.",
+        "Считает, что по сторонам существование треугольника определить невозможно."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_triangles_basic_2",
+      "nodeId": "triangles_basic",
+      "text": {
+        "kk": "Екі қабырғасы және олардың арасындағы бұрышы тең үшбұрыштар қай белгі бойынша тең?",
+        "ru": "По какому признаку равны треугольники, у которых равны две стороны и угол между ними?",
+        "en": "By which criterion are triangles congruent if two sides and the included angle are equal?"
+      },
+      "options": [
+        "по двум сторонам и углу между ними",
+        "по трём сторонам",
+        "по стороне и двум прилежащим углам",
+        "по двум углам"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал третий признак равенства вместо первого.",
+        "Назвал второй признак равенства вместо первого.",
+        "Равенство двух углов задаёт подобие, а не равенство треугольников."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_triangles_basic_3",
+      "nodeId": "triangles_basic",
+      "text": {
+        "kk": "ABC үшбұрышында AB = AC. Қандай бұрыштар тең?",
+        "ru": "В треугольнике ABC известно, что AB = AC. Какие углы равны?",
+        "en": "In triangle ABC, AB = AC. Which angles are equal?"
+      },
+      "options": [
+        "углы B и C",
+        "углы A и B",
+        "углы A и C",
+        "все три угла"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Связал равные углы не с теми вершинами: равны углы при основании.",
+        "Связал равные углы не с теми вершинами.",
+        "Спутал равнобедренный треугольник с равносторонним."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_decimal_operations_1",
+      "nodeId": "decimal_operations",
+      "text": {
+        "kk": "0,2 · 0,3 = ?",
+        "ru": "0,2 · 0,3 = ?",
+        "en": "0.2 · 0.3 = ?"
+      },
+      "options": [
+        "0,06",
+        "0,6",
+        "6",
+        "0,5"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Поставил в ответе один знак после запятой вместо двух.",
+        "Перемножил как натуральные числа, потеряв запятую.",
+        "Сложил числа вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_decimal_operations_2",
+      "nodeId": "decimal_operations",
+      "text": {
+        "kk": "1,2 : 0,4 = ?",
+        "ru": "1,2 : 0,4 = ?",
+        "en": "1.2 ÷ 0.4 = ?"
+      },
+      "options": [
+        "3",
+        "0,3",
+        "30",
+        "0,8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не перенёс запятую в делимом после того, как избавился от неё в делителе.",
+        "Перенёс запятую на разряд больше, чем нужно.",
+        "Вычел вместо деления."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_decimal_operations_3",
+      "nodeId": "decimal_operations",
+      "text": {
+        "kk": "3,7 + 0,45 = ?",
+        "ru": "3,7 + 0,45 = ?",
+        "en": "3.7 + 0.45 = ?"
+      },
+      "options": [
+        "4,15",
+        "8,2",
+        "4,25",
+        "0,82"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил цифры без учёта запятой, как натуральные числа 37 и 45.",
+        "Ошибся в разряде десятых при переходе через единицу.",
+        "Сложил только дробные части, потеряв целую."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_parallel_lines_1",
+      "nodeId": "parallel_lines",
+      "text": {
+        "kk": "Екі параллель түзуді қиюшы қиғанда пайда болған бұрыштардың бірі 65°-қа тең. Онымен айқыш жатқан бұрыш неге тең?",
+        "ru": "При пересечении двух параллельных прямых секущей один из углов равен 65°. Чему равен накрест лежащий с ним угол?",
+        "en": "A transversal crosses two parallel lines and one angle is 65°. What is the alternate angle?"
+      },
+      "options": [
+        "65°",
+        "115°",
+        "25°",
+        "130°"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал смежный угол вместо накрест лежащего.",
+        "Дополнил угол до 90° вместо 180°.",
+        "Удвоил величину угла."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_parallel_lines_2",
+      "nodeId": "parallel_lines",
+      "text": {
+        "kk": "Параллель түзулер мен қиюшы жағдайында ішкі біржақты бұрыштардың қосындысы неге тең?",
+        "ru": "Чему равна сумма односторонних углов при параллельных прямых и секущей?",
+        "en": "What is the sum of co-interior angles formed by parallel lines and a transversal?"
+      },
+      "options": [
+        "180°",
+        "90°",
+        "360°",
+        "они равны между собой"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Спутал сумму односторонних углов с прямым углом.",
+        "Спутал с суммой всех углов вокруг точки.",
+        "Спутал односторонние углы с накрест лежащими, которые действительно равны."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_parallel_lines_3",
+      "nodeId": "parallel_lines",
+      "text": {
+        "kk": "Қандай түзулер параллель деп аталады?",
+        "ru": "Какие прямые называются параллельными?",
+        "en": "Which lines are called parallel?"
+      },
+      "options": [
+        "лежащие в одной плоскости и не пересекающиеся",
+        "любые не пересекающиеся прямые",
+        "пересекающиеся под прямым углом",
+        "любые равноудалённые прямые в пространстве"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Упустил условие принадлежности одной плоскости — в пространстве такие прямые скрещиваются.",
+        "Спутал параллельные прямые с перпендикулярными.",
+        "Упустил условие принадлежности одной плоскости."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_quadratic_equations_1",
+      "nodeId": "quadratic_equations",
+      "text": {
+        "kk": "x² − 5x + 6 = 0 теңдеуін шешіңіз",
+        "ru": "Решите уравнение x² − 5x + 6 = 0",
+        "en": "Solve x² − 5x + 6 = 0"
+      },
+      "options": [
+        "2 и 3",
+        "−2 и −3",
+        "1 и 6",
+        "5 и 6"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перепутал знаки корней: по теореме Виета сумма равна 5, а не −5.",
+        "Подобрал числа с суммой 7 вместо 5.",
+        "Назвал коэффициенты уравнения вместо корней."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_geometry_intro_1",
+      "nodeId": "geometry_intro",
+      "text": {
+        "kk": "Екі әртүрлі нүкте арқылы неше түзу жүргізуге болады?",
+        "ru": "Сколько прямых можно провести через две различные точки?",
+        "en": "How many lines can be drawn through two distinct points?"
+      },
+      "options": [
+        "одну",
+        "две",
+        "ни одной",
+        "бесконечно много"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Спутал прямую с лучами, выходящими из точек.",
+        "Считает, что для построения прямой нужны дополнительные условия.",
+        "Перенёс на две точки свойство одной точки, через которую прямых бесконечно много."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_triangle_angles_sum_1",
+      "nodeId": "triangle_angles_sum",
+      "text": {
+        "kk": "Үшбұрыштың екі бұрышы 50° және 60°. Үшінші бұрышы неге тең?",
+        "ru": "Два угла треугольника равны 50° и 60°. Чему равен третий угол?",
+        "en": "Two angles of a triangle are 50° and 60°. What is the third angle?"
+      },
+      "options": [
+        "70°",
+        "110°",
+        "80°",
+        "50°"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил данные углы вместо вычитания их суммы из 180°.",
+        "Вычел сумму углов из 190° вместо 180°.",
+        "Решил, что треугольник равнобедренный, не проверив условие."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_ratio_basic_1",
+      "nodeId": "ratio_basic",
+      "text": {
+        "kk": "12-нің 18-ге қатынасын қысқармайтын түрде жазыңыз",
+        "ru": "Запишите отношение 12 к 18 в несократимом виде",
+        "en": "Write the ratio 12 to 18 in lowest terms"
+      },
+      "options": [
+        "2 : 3",
+        "3 : 2",
+        "6 : 9",
+        "12 : 18"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Записал отношение в обратном порядке.",
+        "Сократил не полностью: 6 и 9 ещё делятся на 3.",
+        "Не выполнил сокращение."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_angle_measure_1",
+      "nodeId": "angle_measure",
+      "text": {
+        "kk": "130° бұрыш қандай бұрыш болып табылады?",
+        "ru": "Каким является угол величиной 130°?",
+        "en": "What kind of angle measures 130°?"
+      },
+      "options": [
+        "тупым",
+        "острым",
+        "прямым",
+        "развёрнутым"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Считает острыми все углы меньше 180°.",
+        "Путает прямой угол с любым «большим» углом.",
+        "Считает развёрнутым любой угол больше 90°."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_algebraic_fractions_1",
+      "nodeId": "algebraic_fractions",
+      "text": {
+        "kk": "(x² − 9)/(x + 3) бөлшегін қысқартыңыз",
+        "ru": "Сократите дробь (x² − 9)/(x + 3)",
+        "en": "Simplify (x² − 9)/(x + 3)"
+      },
+      "options": [
+        "x − 3",
+        "x + 3",
+        "x² − 3",
+        "−3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сократил не тот множитель разности квадратов.",
+        "Сократил x² с x, а не разложил числитель на множители.",
+        "Сократил слагаемые вместо множителей."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_proportion_1",
+      "nodeId": "proportion",
+      "text": {
+        "kk": "x-ті табыңыз: 3/4 = x/20",
+        "ru": "Найдите x: 3/4 = x/20",
+        "en": "Find x: 3/4 = x/20"
+      },
+      "options": [
+        "15",
+        "19",
+        "5",
+        "60"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Рассуждал сложением вместо умножения: к 4 прибавили 16, значит и к 3 прибавил 16.",
+        "Разделил 20 на 4 и остановился, не умножив на 3.",
+        "Перемножил накрест, но не разделил на 4."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_frac_decimal_convert_1",
+      "nodeId": "frac_decimal_convert",
+      "text": {
+        "kk": "3/8 бөлшегін ондық бөлшек түрінде жазыңыз",
+        "ru": "Запишите дробь 3/8 в виде десятичной",
+        "en": "Write 3/8 as a decimal"
+      },
+      "options": [
+        "0,375",
+        "0,38",
+        "2,666…",
+        "0,83"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Округлил, не выполнив деление до конца.",
+        "Разделил знаменатель на числитель вместо числителя на знаменатель.",
+        "Приписал цифры дроби после запятой без деления."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_coordinate_plane_1",
+      "nodeId": "coordinate_plane",
+      "text": {
+        "kk": "A(−3; 2) нүктесі қай ширекте жатыр?",
+        "ru": "В какой четверти лежит точка A(−3; 2)?",
+        "en": "In which quadrant does the point A(−3; 2) lie?"
+      },
+      "options": [
+        "во II",
+        "в I",
+        "в III",
+        "в IV"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не учёл знак минус у абсциссы.",
+        "Решил, что минус в координате означает третью четверть.",
+        "Перепутал порядок координат."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_factorization_1",
+      "nodeId": "factorization",
+      "text": {
+        "kk": "x² − 4x өрнегін көбейткіштерге жіктеңіз",
+        "ru": "Разложите на множители x² − 4x",
+        "en": "Factor x² − 4x"
+      },
+      "options": [
+        "x(x − 4)",
+        "x(x + 4)",
+        "(x − 2)(x + 2)",
+        "x²(1 − 4)"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Потерял знак минус при вынесении общего множителя.",
+        "Применил формулу разности квадратов там, где её нет.",
+        "Вынес x² вместо x, исказив второе слагаемое."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_function_concept_1",
+      "nodeId": "function_concept",
+      "text": {
+        "kk": "y = 3 функциясының графигі не болып табылады?",
+        "ru": "Что является графиком функции y = 3?",
+        "en": "What is the graph of the function y = 3?"
+      },
+      "options": [
+        "горизонтальная прямая",
+        "вертикальная прямая",
+        "прямая через начало координат",
+        "парабола"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Спутал y = 3 с x = 3.",
+        "Решил, что любая линейная функция проходит через начало координат.",
+        "Спутал линейную функцию с квадратичной."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_coordinate_ray_1",
+      "nodeId": "coordinate_ray",
+      "text": {
+        "kk": "Координаталық сәуледе 0 мен 1 нүктелерінің дәл ортасында қандай сан жатыр?",
+        "ru": "Какое число лежит ровно посередине между 0 и 1 на координатном луче?",
+        "en": "Which number lies exactly halfway between 0 and 1 on the number ray?"
+      },
+      "options": [
+        "0,5",
+        "1",
+        "0,1",
+        "2"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал конец отрезка вместо его середины.",
+        "Считает, что между 0 и 1 первым идёт 0,1.",
+        "Вышел за пределы отрезка."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_percent_basic_1",
+      "nodeId": "percent_basic",
+      "text": {
+        "kk": "80 санының 25% -ы неге тең?",
+        "ru": "Чему равны 25% числа 80?",
+        "en": "What is 25% of 80?"
+      },
+      "options": [
+        "20",
+        "25",
+        "320",
+        "2000"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал сам процент, не применив его к числу.",
+        "Разделил 80 на 0,25 вместо умножения.",
+        "Умножил на 25, но не разделил на 100."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_units_measure_1",
+      "nodeId": "units_measure",
+      "text": {
+        "kk": "3,5 км-де неше метр бар?",
+        "ru": "Сколько метров в 3,5 км?",
+        "en": "How many metres are in 3.5 km?"
+      },
+      "options": [
+        "3500",
+        "350",
+        "35",
+        "0,0035"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил на 100 вместо 1000.",
+        "Умножил на 10 вместо 1000.",
+        "Разделил вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_statistics_basic_1",
+      "nodeId": "statistics_basic",
+      "text": {
+        "kk": "2, 3, 3, 5, 8 қатарының модасы неге тең?",
+        "ru": "Чему равна мода ряда 2, 3, 3, 5, 8?",
+        "en": "What is the mode of the data set 2, 3, 3, 5, 8?"
+      },
+      "options": [
+        "3",
+        "4,2",
+        "6",
+        "8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл среднее арифметическое вместо моды.",
+        "Нашёл размах вместо моды.",
+        "Назвал наибольшее значение ряда."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_algebraic_fractions_operations_1",
+      "nodeId": "algebraic_fractions_operations",
+      "text": {
+        "kk": "1/x + 1/y = ?",
+        "ru": "1/x + 1/y = ?",
+        "en": "1/x + 1/y = ?"
+      },
+      "options": [
+        "(x + y)/(xy)",
+        "2/(x + y)",
+        "1/(x + y)",
+        "(xy)/(x + y)"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил знаменатели и числители по отдельности.",
+        "Сложил только знаменатели, оставив числитель без изменения.",
+        "Перевернул верно найденную дробь."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_inequalities_linear_1",
+      "nodeId": "inequalities_linear",
+      "text": {
+        "kk": "−2x > 6 теңсіздігін шешіңіз",
+        "ru": "Решите неравенство −2x > 6",
+        "en": "Solve the inequality −2x > 6"
+      },
+      "options": [
+        "x < −3",
+        "x > −3",
+        "x > 3",
+        "x < 3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не поменял знак неравенства при делении на отрицательное число.",
+        "Потерял знак минус и не поменял знак неравенства.",
+        "Потерял знак минус у результата."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_pythagorean_theorem_1",
+      "nodeId": "pythagorean_theorem",
+      "text": {
+        "kk": "Тікбұрышты үшбұрыштың катеттері 6 және 8. Гипотенузасы неге тең?",
+        "ru": "Катеты прямоугольного треугольника равны 6 и 8. Чему равна гипотенуза?",
+        "en": "The legs of a right triangle are 6 and 8. What is the hypotenuse?"
+      },
+      "options": [
+        "10",
+        "14",
+        "100",
+        "7"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил катеты вместо применения теоремы Пифагора.",
+        "Нашёл сумму квадратов, но не извлёк корень.",
+        "Нашёл среднее арифметическое катетов."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_similar_triangles_1",
+      "nodeId": "similar_triangles",
+      "text": {
+        "kk": "Ұқсастық коэффициенті 3-ке тең. Ұқсас үшбұрыштардың аудандары неше есе өзгешеленеді?",
+        "ru": "Коэффициент подобия равен 3. Во сколько раз отличаются площади подобных треугольников?",
+        "en": "The similarity ratio is 3. By what factor do the areas differ?"
+      },
+      "options": [
+        "в 9 раз",
+        "в 3 раза",
+        "в 6 раз",
+        "в 27 раз"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Применил коэффициент подобия к площади напрямую, как к длине.",
+        "Удвоил коэффициент вместо возведения в квадрат.",
+        "Возвёл коэффициент в куб — это отношение объёмов, а не площадей."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_quadrilaterals_1",
+      "nodeId": "quadrilaterals",
+      "text": {
+        "kk": "Параллелограмм үшін қай тұжырым дұрыс?",
+        "ru": "Какое утверждение верно для любого параллелограмма?",
+        "en": "Which statement is true for every parallelogram?"
+      },
+      "options": [
+        "диагонали точкой пересечения делятся пополам",
+        "диагонали равны",
+        "все стороны равны",
+        "диагонали перпендикулярны"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Это свойство прямоугольника, а не любого параллелограмма.",
+        "Это свойство ромба, а не любого параллелограмма.",
+        "Это свойство ромба, а не любого параллелограмма."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_nat_divisibility_1",
+      "nodeId": "nat_divisibility",
+      "text": {
+        "kk": "Қай сан 9-ға бөлінеді?",
+        "ru": "Какое из чисел делится на 9?",
+        "en": "Which of these numbers is divisible by 9?"
+      },
+      "options": [
+        "243",
+        "124",
+        "358",
+        "470"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Проверил делимость на 2 или 4 вместо суммы цифр.",
+        "Не применил признак делимости по сумме цифр.",
+        "Ориентировался на последнюю цифру вместо суммы цифр."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_perimeter_area_basic_1",
+      "nodeId": "perimeter_area_basic",
+      "text": {
+        "kk": "Тіктөртбұрыштың қабырғалары 5 см және 3 см. Ауданы неге тең?",
+        "ru": "Стороны прямоугольника равны 5 см и 3 см. Чему равна его площадь?",
+        "en": "A rectangle has sides 5 cm and 3 cm. What is its area?"
+      },
+      "options": [
+        "15 см²",
+        "16 см",
+        "8 см",
+        "15 см"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл периметр вместо площади.",
+        "Сложил стороны вместо умножения.",
+        "Посчитал верно, но указал единицу длины вместо единицы площади."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_average_value_1",
+      "nodeId": "average_value",
+      "text": {
+        "kk": "4, 7 және 10 сандарының арифметикалық ортасын табыңыз",
+        "ru": "Найдите среднее арифметическое чисел 4, 7 и 10",
+        "en": "Find the arithmetic mean of 4, 7 and 10"
+      },
+      "options": [
+        "7",
+        "21",
+        "5,5",
+        "10"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл сумму, но не разделил на количество чисел.",
+        "Разделил сумму на 2 вместо 3.",
+        "Назвал наибольшее число вместо среднего."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_data_tables_basic_1",
+      "nodeId": "data_tables_basic",
+      "text": {
+        "kk": "Кестеде оқушы саны көрсетілген: 5А — 24, 5Ә — 28, 5Б — 22. Үш сыныпта барлығы неше оқушы бар?",
+        "ru": "В таблице указано число учеников: 5А — 24, 5Б — 28, 5В — 22. Сколько всего учеников в трёх классах?",
+        "en": "A table lists the number of students: 5A — 24, 5B — 28, 5C — 22. How many students are there in total?"
+      },
+      "options": [
+        "74",
+        "72",
+        "28",
+        "24"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Ошибся при сложении трёх чисел.",
+        "Назвал наибольшее значение вместо суммы.",
+        "Прочитал только первую строку таблицы."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_linear_function_1",
+      "nodeId": "linear_function",
+      "text": {
+        "kk": "y = 2x − 3 функциясының графигі Oy осін қай нүктеде қияды?",
+        "ru": "В какой точке график функции y = 2x − 3 пересекает ось Oy?",
+        "en": "At which point does the graph of y = 2x − 3 cross the y-axis?"
+      },
+      "options": [
+        "(0; −3)",
+        "(−3; 0)",
+        "(0; 2)",
+        "(3; 0)"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Перепутал оси: это точка пересечения с осью Ox была бы при другом значении.",
+        "Взял угловой коэффициент вместо свободного члена.",
+        "Потерял знак и перепутал оси."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_word_problems_equations_1",
+      "nodeId": "word_problems_equations",
+      "text": {
+        "kk": "Тіктөртбұрыштың периметрі 40 см, ұзындығы енінен 4 см артық. Енін табыңыз.",
+        "ru": "Периметр прямоугольника равен 40 см, а длина на 4 см больше ширины. Найдите ширину.",
+        "en": "A rectangle has perimeter 40 cm and its length is 4 cm greater than its width. Find the width."
+      },
+      "options": [
+        "8 см",
+        "12 см",
+        "16 см",
+        "20 см"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл длину вместо ширины.",
+        "Разделил периметр на 2 и вычел 4, забыв, что полупериметр — это сумма длины и ширины.",
+        "Нашёл полупериметр (40 : 2), не разделив его между длиной и шириной."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_text_problems_arithmetic_1",
+      "nodeId": "text_problems_arithmetic",
+      "text": {
+        "kk": "Турист 3 сағатта 12 км жүрді. Ол қандай жылдамдықпен жүрді?",
+        "ru": "Турист прошёл 12 км за 3 часа. С какой скоростью он шёл?",
+        "en": "A hiker walked 12 km in 3 hours. What was the speed?"
+      },
+      "options": [
+        "4 км/ч",
+        "36 км/ч",
+        "15 км/ч",
+        "9 км/ч"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Умножил расстояние на время вместо деления.",
+        "Сложил расстояние и время.",
+        "Вычел время из расстояния."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_percent_problems_1",
+      "nodeId": "percent_problems",
+      "text": {
+        "kk": "Тауар 8000 теңге тұрған, 15%-ға арзандады. Жаңа бағасы қандай?",
+        "ru": "Товар стоил 8000 тг и подешевел на 15%. Какова новая цена?",
+        "en": "An item cost 8000 tenge and its price fell by 15%. What is the new price?"
+      },
+      "options": [
+        "6800 тг",
+        "1200 тг",
+        "9200 тг",
+        "7985 тг"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл величину скидки, но не вычел её из цены.",
+        "Прибавил скидку вместо вычитания.",
+        "Вычел 15 тенге вместо 15 процентов."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_probability_intro_1",
+      "nodeId": "probability_intro",
+      "text": {
+        "kk": "Қапта 3 ақ және 7 қара шар бар. Ақ шар алу ықтималдығы қандай?",
+        "ru": "В мешке 3 белых и 7 чёрных шаров. Какова вероятность вытащить белый шар?",
+        "en": "A bag holds 3 white and 7 black balls. What is the probability of drawing a white ball?"
+      },
+      "options": [
+        "0,3",
+        "0,7",
+        "3/7",
+        "0,03"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Взял долю чёрных шаров вместо белых.",
+        "Отнёс число белых шаров к числу чёрных, а не к общему числу шаров.",
+        "Ошибся в разряде при переводе доли в десятичную дробь."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_prime_factorization_1",
+      "nodeId": "prime_factorization",
+      "text": {
+        "kk": "60 санын жай көбейткіштерге жіктеңіз",
+        "ru": "Разложите число 60 на простые множители",
+        "en": "Write 60 as a product of prime factors"
+      },
+      "options": [
+        "2 · 2 · 3 · 5",
+        "2 · 30",
+        "4 · 15",
+        "6 · 10"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Остановился на первом шаге: 30 не является простым числом.",
+        "Множители 4 и 15 не являются простыми.",
+        "Множители 6 и 10 не являются простыми."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_gcd_lcm_1",
+      "nodeId": "gcd_lcm",
+      "text": {
+        "kk": "ЕҮОБ(12; 18) = ?",
+        "ru": "НОД(12; 18) = ?",
+        "en": "GCD(12, 18) = ?"
+      },
+      "options": [
+        "6",
+        "36",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл наименьшее общее кратное вместо наибольшего общего делителя.",
+        "Взял только один общий простой множитель.",
+        "Взял только один общий простой множитель."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_rounding_estimation_1",
+      "nodeId": "rounding_estimation",
+      "text": {
+        "kk": "3,478 санын жүздікке дейін дөңгелектеңіз",
+        "ru": "Округлите число 3,478 до сотых",
+        "en": "Round 3.478 to the nearest hundredth"
+      },
+      "options": [
+        "3,48",
+        "3,47",
+        "3,5",
+        "3,4"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Отбросил цифру вместо округления по правилу.",
+        "Округлил до десятых вместо сотых.",
+        "Округлил до десятых и отбросил цифру."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_volume_basic_1",
+      "nodeId": "volume_basic",
+      "text": {
+        "kk": "Тікбұрышты параллелепипедтің қырлары 2, 3 және 4 см. Көлемі неге тең?",
+        "ru": "Рёбра прямоугольного параллелепипеда равны 2, 3 и 4 см. Чему равен его объём?",
+        "en": "A rectangular prism has edges 2, 3 and 4 cm. What is its volume?"
+      },
+      "options": [
+        "24 см³",
+        "9 см³",
+        "24 см²",
+        "18 см³"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Сложил рёбра вместо перемножения.",
+        "Посчитал верно, но указал единицу площади вместо единицы объёма.",
+        "Ошибся при перемножении трёх чисел."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_mixed_numbers_1",
+      "nodeId": "mixed_numbers",
+      "text": {
+        "kk": "7/3 бұрыс бөлшегін аралас сан түрінде жазыңыз",
+        "ru": "Запишите неправильную дробь 7/3 в виде смешанного числа",
+        "en": "Write the improper fraction 7/3 as a mixed number"
+      },
+      "options": [
+        "2 1/3",
+        "3 1/2",
+        "1 4/3",
+        "2 3/1"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Поменял местами числитель и знаменатель при делении.",
+        "Выделил целую часть не полностью: 4/3 всё ещё неправильная дробь.",
+        "Перевернул дробную часть."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_direct_inverse_proportion_1",
+      "nodeId": "direct_inverse_proportion",
+      "text": {
+        "kk": "Жол ұзындығы өзгермесе, жылдамдықты екі есе арттырғанда жолда өткізілетін уақыт қалай өзгереді?",
+        "ru": "Если при том же расстоянии увеличить скорость вдвое, время в пути:",
+        "en": "If the distance stays the same and the speed doubles, the travel time:"
+      },
+      "options": [
+        "уменьшится вдвое",
+        "увеличится вдвое",
+        "не изменится",
+        "уменьшится вчетверо"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Принял обратную пропорциональность за прямую.",
+        "Не увидел зависимости между величинами.",
+        "Возвёл коэффициент в квадрат вместо простого обратного отношения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_scale_maps_1",
+      "nodeId": "scale_maps",
+      "text": {
+        "kk": "Картаның масштабы 1 : 100 000. Картадағы 3 см кесіндіге жерде қандай қашықтық сәйкес келеді?",
+        "ru": "Масштаб карты 1 : 100 000. Какое расстояние на местности соответствует отрезку 3 см на карте?",
+        "en": "A map has scale 1 : 100 000. What real distance matches a 3 cm segment on the map?"
+      },
+      "options": [
+        "3 км",
+        "300 м",
+        "30 км",
+        "3 м"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Ошибся при переводе сантиметров в километры на порядок.",
+        "Ошибся при переводе на порядок в другую сторону.",
+        "Не выполнил перевод единиц вовсе."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_circle_circumference_1",
+      "nodeId": "circle_circumference",
+      "text": {
+        "kk": "Шеңбердің радиусы 5 см. Шеңбердің ұзындығын табыңыз (π ≈ 3,14)",
+        "ru": "Радиус окружности равен 5 см. Найдите длину окружности (π ≈ 3,14)",
+        "en": "A circle has radius 5 cm. Find its circumference (π ≈ 3.14)"
+      },
+      "options": [
+        "31,4 см",
+        "78,5 см",
+        "15,7 см",
+        "10 см"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл площадь круга вместо длины окружности.",
+        "Забыл множитель 2: посчитал πr вместо 2πr.",
+        "Нашёл диаметр вместо длины окружности."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_symmetry_1",
+      "nodeId": "symmetry",
+      "text": {
+        "kk": "Шаршының неше симметрия осі бар?",
+        "ru": "Сколько осей симметрии у квадрата?",
+        "en": "How many axes of symmetry does a square have?"
+      },
+      "options": [
+        "4",
+        "2",
+        "1",
+        "бесконечно много"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Учёл только две оси через середины сторон, забыв про диагонали.",
+        "Нашёл только одну ось симметрии.",
+        "Спутал квадрат с окружностью."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_divisibility_advanced_1",
+      "nodeId": "divisibility_advanced",
+      "text": {
+        "kk": "Қай сан 11-ге бөлінеді?",
+        "ru": "Какое из чисел делится на 11?",
+        "en": "Which of these numbers is divisible by 11?"
+      },
+      "options": [
+        "253",
+        "124",
+        "365",
+        "482"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не применил признак делимости на 11 по знакочередующейся сумме цифр.",
+        "Ориентировался на последнюю цифру.",
+        "Ориентировался на чётность числа."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_simple_equations_6_1",
+      "nodeId": "simple_equations_6",
+      "text": {
+        "kk": "Теңдеуді шешіңіз: x : 5 = 12",
+        "ru": "Решите уравнение: x : 5 = 12",
+        "en": "Solve: x ÷ 5 = 12"
+      },
+      "options": [
+        "60",
+        "2,4",
+        "17",
+        "7"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Разделил 12 на 5 вместо умножения.",
+        "Прибавил 5 вместо умножения.",
+        "Вычел 5 вместо умножения."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_standard_form_numbers_1",
+      "nodeId": "standard_form_numbers",
+      "text": {
+        "kk": "45 000 санын стандарт түрде жазыңыз",
+        "ru": "Запишите число 45 000 в стандартном виде",
+        "en": "Write 45 000 in standard form"
+      },
+      "options": [
+        "4,5 · 10⁴",
+        "45 · 10³",
+        "4,5 · 10³",
+        "0,45 · 10⁵"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Мантисса должна быть от 1 до 10, а 45 в этот промежуток не входит.",
+        "Ошибся в показателе степени на единицу.",
+        "Мантисса меньше 1, а должна быть от 1 до 10."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_linear_function_graphs_1",
+      "nodeId": "linear_function_graphs",
+      "text": {
+        "kk": "y = 3x + 1 және y = 3x − 2 функцияларының графиктері қалай орналасқан?",
+        "ru": "Как расположены графики функций y = 3x + 1 и y = 3x − 2?",
+        "en": "How are the graphs of y = 3x + 1 and y = 3x − 2 positioned?"
+      },
+      "options": [
+        "параллельны",
+        "пересекаются в одной точке",
+        "совпадают",
+        "перпендикулярны"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не сравнил угловые коэффициенты: при равных коэффициентах прямые не пересекаются.",
+        "Решил, что равные угловые коэффициенты означают совпадение прямых.",
+        "Спутал условие параллельности с условием перпендикулярности."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_isosceles_triangle_1",
+      "nodeId": "isosceles_triangle",
+      "text": {
+        "kk": "Теңбүйірлі үшбұрыштың төбесіндегі бұрышы 40°. Табанындағы бұрыштары неге тең?",
+        "ru": "Угол при вершине равнобедренного треугольника равен 40°. Чему равны углы при основании?",
+        "en": "The apex angle of an isosceles triangle is 40°. What are the base angles?"
+      },
+      "options": [
+        "70°",
+        "140°",
+        "40°",
+        "50°"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл сумму двух углов при основании, но не разделил её пополам.",
+        "Решил, что все углы треугольника равны между собой.",
+        "Дополнил угол до 90° вместо использования суммы углов треугольника."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_vieta_theorem_1",
+      "nodeId": "vieta_theorem",
+      "text": {
+        "kk": "x² − 7x + 12 = 0 теңдеуі түбірлерінің қосындысы неге тең?",
+        "ru": "Чему равна сумма корней уравнения x² − 7x + 12 = 0?",
+        "en": "What is the sum of the roots of x² − 7x + 12 = 0?"
+      },
+      "options": [
+        "7",
+        "−7",
+        "12",
+        "−12"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не поменял знак: по теореме Виета сумма корней равна −b/a.",
+        "Назвал произведение корней вместо суммы.",
+        "Назвал произведение корней и ошибся в знаке."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_quadratic_function_1",
+      "nodeId": "quadratic_function",
+      "text": {
+        "kk": "y = −2x² + 3 параболасының тармақтары қайда бағытталған?",
+        "ru": "Куда направлены ветви параболы y = −2x² + 3?",
+        "en": "Which way does the parabola y = −2x² + 3 open?"
+      },
+      "options": [
+        "вниз",
+        "вверх",
+        "вправо",
+        "зависит от свободного члена"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не учёл знак старшего коэффициента.",
+        "Спутал параболу вида y = ax² с параболой вида x = ay².",
+        "Считает, что направление ветвей задаёт свободный член, а не старший коэффициент."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_inequality_systems_1",
+      "nodeId": "inequality_systems",
+      "text": {
+        "kk": "x > 2, x < 5 жүйесінің шешімі қандай?",
+        "ru": "Каково решение системы неравенств x > 2, x < 5?",
+        "en": "What is the solution of the system x > 2, x < 5?"
+      },
+      "options": [
+        "(2; 5)",
+        "(−∞; 2) ∪ (5; +∞)",
+        "(2; +∞)",
+        "решений нет"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Взял объединение вместо пересечения промежутков.",
+        "Учёл только первое неравенство системы.",
+        "Решил, что противоположные знаки неравенств делают систему несовместной."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_area_polygons_1",
+      "nodeId": "area_polygons",
+      "text": {
+        "kk": "Трапецияның табандары 6 және 10, биіктігі 4. Ауданын табыңыз.",
+        "ru": "Основания трапеции равны 6 и 10, высота равна 4. Найдите площадь.",
+        "en": "A trapezoid has bases 6 and 10 and height 4. Find its area."
+      },
+      "options": [
+        "32",
+        "64",
+        "24",
+        "40"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не разделил полусумму оснований пополам.",
+        "Умножил на высоту только меньшее основание.",
+        "Умножил на высоту только большее основание."
+      ],
+      "misconceptionTags": [
+        "none",
+        "procedural",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_trigonometry_intro_1",
+      "nodeId": "trigonometry_intro",
+      "text": {
+        "kk": "Тікбұрышты үшбұрышта бұрышқа қарсы жатқан катет 3, гипотенуза 5. Осы бұрыштың синусы неге тең?",
+        "ru": "В прямоугольном треугольнике катет, противолежащий углу, равен 3, а гипотенуза равна 5. Чему равен синус этого угла?",
+        "en": "In a right triangle the leg opposite an angle is 3 and the hypotenuse is 5. What is the sine of that angle?"
+      },
+      "options": [
+        "0,6",
+        "0,8",
+        "1,67",
+        "0,75"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл косинус вместо синуса.",
+        "Перевернул отношение: разделил гипотенузу на катет.",
+        "Нашёл тангенс вместо синуса."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "procedural",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_rational_equations_1",
+      "nodeId": "rational_equations",
+      "text": {
+        "kk": "1/(x − 3) = 2 теңдеуінің түбірі бола алмайтын мән қандай?",
+        "ru": "Какое значение x не может быть корнем уравнения 1/(x − 3) = 2?",
+        "en": "Which value of x cannot be a root of 1/(x − 3) = 2?"
+      },
+      "options": [
+        "3",
+        "2",
+        "0",
+        "−3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Не нашёл область допустимых значений: знаменатель не может обращаться в ноль.",
+        "Спутал ограничение ОДЗ с правой частью уравнения.",
+        "Поставил знак минус там, где обнуляется знаменатель при x = 3."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "conceptual",
+        "careless"
+      ]
+    },
+    {
+      "id": "q_word_problems_systems_1",
+      "nodeId": "word_problems_systems",
+      "text": {
+        "kk": "Екі қалам мен үш дәптер 700 теңге тұрады, ал бір қалам мен бір дәптер 300 теңге тұрады. Дәптердің бағасы қанша?",
+        "ru": "Две ручки и три тетради стоят 700 тг, а одна ручка и одна тетрадь — 300 тг. Сколько стоит тетрадь?",
+        "en": "Two pens and three notebooks cost 700 tenge; one pen and one notebook cost 300 tenge. How much does a notebook cost?"
+      },
+      "options": [
+        "100 тг",
+        "200 тг",
+        "300 тг",
+        "150 тг"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Нашёл цену ручки вместо цены тетради.",
+        "Взял стоимость пары предметов за стоимость одного.",
+        "Разделил 300 пополам, не составляя систему."
+      ],
+      "misconceptionTags": [
+        "none",
+        "careless",
+        "conceptual",
+        "conceptual"
+      ]
+    },
+    {
+      "id": "q_statistics_grouped_1",
+      "nodeId": "statistics_grouped",
+      "text": {
+        "kk": "200 адам қатысқан сауалнамада 25% А нұсқасын таңдады. Бұл неше адам?",
+        "ru": "В опросе участвовали 200 человек, 25% из них выбрали вариант А. Сколько это человек?",
+        "en": "In a survey of 200 people, 25% chose option A. How many people is that?"
+      },
+      "options": [
+        "50",
+        "25",
+        "75",
+        "8"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал сам процент, не применив его к числу опрошенных.",
+        "Нашёл долю выбравших остальные варианты.",
+        "Разделил 200 на 25 вместо умножения на 0,25."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "procedural"
+      ]
+    },
+    {
+      "id": "q_probability_classic_1",
+      "nodeId": "probability_classic",
+      "text": {
+        "kk": "Ойын сүйегін лақтырады. Жұп сан түсу ықтималдығы қандай?",
+        "ru": "Бросают игральный кубик. Какова вероятность выпадения чётного числа?",
+        "en": "A die is rolled. What is the probability of getting an even number?"
+      },
+      "options": [
+        "0,5",
+        "1/6",
+        "2/6",
+        "3"
+      ],
+      "correctIndex": 0,
+      "misconception": [
+        "",
+        "Назвал вероятность одного конкретного исхода.",
+        "Посчитал только два чётных числа вместо трёх.",
+        "Назвал число благоприятных исходов вместо вероятности."
+      ],
+      "misconceptionTags": [
+        "none",
+        "conceptual",
+        "careless",
+        "conceptual"
+      ]
+    }
+  ]
+}

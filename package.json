@@ -1,0 +1,36 @@
+{
+  "name": "tamyr-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run validate:graph && npm run validate:data && npm run validate:cache && next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "validate:graph": "tsx scripts/validate-graph.ts",
+    "test": "vitest run",
+    "generate:students": "tsx scripts/generate-students.ts",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "validate:cache": "tsx scripts/validate-explain-cache.ts",
+    "generate:cache": "tsx scripts/generate-explain-cache.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.117.1",
+    "next": "^15.5.23",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
