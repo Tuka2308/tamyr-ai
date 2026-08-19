@@ -42,6 +42,36 @@ const sourceById = new Map(
   (chunksFile.chunks as { id: string; source: string }[]).map((c) => [c.id, c.source]),
 );
 
+type ClientChunk = { id: string; nodeId: string; lang: Locale; text: string; source: string };
+const allChunks = chunksFile.chunks as unknown as ClientChunk[];
+
+/**
+ * Фрагмент программы прямо из бандла — последний рубеж, когда сети нет,
+ * а в кэше нужной пары «узел + тег» не оказалось. Показать материал
+ * программы честнее, чем показать пустоту: он и так лежит в бандле.
+ */
+function chunkFallback(nodeId: string, locale: Locale): ExplainResponse | null {
+  const forNode = allChunks.filter((c) => c.nodeId === nodeId);
+  if (forNode.length === 0) return null;
+
+  const inLocale = forNode.filter((c) => c.lang === locale);
+  const chosen = (inLocale.length > 0 ? inLocale : forNode.filter((c) => c.lang === "ru"))[0];
+  if (!chosen) return null;
+
+  return {
+    status: "chunk_fallback",
+    tag: "none",
+    retrievedCount: 1,
+    explanation: chosen.text,
+    sources: [chosen.source],
+    sourceLang: chosen.lang,
+    languageFallback: chosen.lang !== locale,
+    grounded: true,
+    unsupported: [],
+    reason: "error",
+  };
+}
+
 function fromCache(nodeId: string, tag: MisconceptionTag, locale: Locale): ExplainResponse | null {
   // Точное совпадение по языку, затем русская запись с честной пометкой.
   const hit = byKey.get(cacheKey(nodeId, tag, locale)) ?? byKey.get(cacheKey(nodeId, tag, "ru"));
@@ -95,18 +125,21 @@ export async function explain(
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return (await response.json()) as ExplainResponse;
   } catch {
-    // Офлайн или сервер недоступен. Заглушка, а не пустой экран.
-    return {
-      status: "unavailable",
-      tag,
-      retrievedCount: 0,
-      explanation: null,
-      sources: [],
-      sourceLang: null,
-      languageFallback: false,
-      grounded: null,
-      unsupported: [],
-      reason: "error",
-    };
+    // Офлайн или сервер недоступен. Отдаём фрагмент программы из бандла:
+    // он уже здесь, и это честный материал, а не выдумка.
+    return (
+      chunkFallback(nodeId, locale) ?? {
+        status: "unavailable",
+        tag,
+        retrievedCount: 0,
+        explanation: null,
+        sources: [],
+        sourceLang: null,
+        languageFallback: false,
+        grounded: null,
+        unsupported: [],
+        reason: "error",
+      }
+    );
   }
 }

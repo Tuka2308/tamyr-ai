@@ -67,7 +67,7 @@ export default function TeacherPage() {
           {t.teacher.priorityStudents} · {priority.errorCount} {t.common.of}{" "}
           {priority.totalErrors} {t.teacher.priorityErrors}
         </p>
-        <p className="mt-2 text-xs leading-relaxed text-bedrock">{t.teacher.priorityHint}</p>
+        <p className="mt-2 max-w-2xl text-xs leading-relaxed text-bedrock">{t.teacher.priorityHint}</p>
       </section>
 
       <div className="mt-12">

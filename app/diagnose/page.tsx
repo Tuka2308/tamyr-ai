@@ -54,11 +54,11 @@ export default function DiagnosePage() {
     <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
       <div className="grid gap-6 lg:grid-cols-[minmax(0,6fr)_minmax(0,4fr)] lg:gap-8">
         {/* Разрез. На мобильном сворачивается в вертикальную ленту слоёв. */}
-        <div className="order-2 h-[26rem] lg:order-1 lg:h-[calc(100dvh-8rem)] lg:min-h-[34rem]">
+        <div className="order-2 min-w-0 h-[26rem] lg:order-1 lg:h-[calc(100dvh-8rem)] lg:min-h-[34rem]">
           <CrossSection state={state} />
         </div>
 
-        <div className="order-1 lg:order-2 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto">
+        <div className="order-1 min-w-0 lg:order-2 lg:max-h-[calc(100dvh-8rem)] lg:overflow-y-auto">
           {question ? (
             <QuestionPanel state={state} question={question} onAnswer={answer} />
           ) : (

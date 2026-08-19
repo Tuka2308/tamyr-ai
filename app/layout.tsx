@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Golos_Text, Unbounded } from "next/font/google";
 import { LocaleProvider } from "@/lib/i18n";
 import { DEFAULT_LOCALE } from "@/lib/types";
+import { ServiceWorkerRegistrar } from "@/components/service-worker";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -28,6 +29,15 @@ export const metadata: Metadata = {
   description:
     "Находит не то, что ученик не знает, а то, почему: спускается по графу предпосылок до корневого пробела.",
   applicationName: "TAMYR AI",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "TAMYR AI", statusBarStyle: "black-translucent" },
+  icons: {
+    icon: [
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -41,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang={DEFAULT_LOCALE} className={`${unbounded.variable} ${golos.variable}`}>
       <body className="min-h-dvh bg-chalk text-ink antialiased">
         <LocaleProvider>
+          <ServiceWorkerRegistrar />
           <SiteHeader />
           <main id="content">{children}</main>
         </LocaleProvider>

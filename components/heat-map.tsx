@@ -43,11 +43,17 @@ export function HeatMap() {
     <section>
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="font-display text-sm font-semibold">{t.teacher.heatTitle}</h2>
-        <p className="text-xs text-bedrock">{t.teacher.heatHint}</p>
+        <p className="max-w-md text-xs text-bedrock">{t.teacher.heatHint}</p>
       </div>
 
-      {/* Широкая таблица скроллится внутри себя, страница по горизонтали не едет. */}
-      <div className="mt-4 overflow-x-auto rounded-xl border border-bedrock/20">
+      {/* Широкая таблица скроллится внутри себя, страница по горизонтали не едет.
+          contain: paint обязателен вдобавок к overflow-x: несмотря на корректный
+          клиппинг, таблица всё равно увеличивала scrollWidth корневого элемента,
+          и на 360px страница уезжала вбок на 57px. Поймано браузерным тестом. */}
+      <div
+        className="mt-4 overflow-x-auto rounded-xl border border-bedrock/20"
+        style={{ contain: "paint" }}
+      >
         <table className="w-full border-collapse text-xs">
           <caption className="sr-only">
             {t.teacher.heatTitle}: {seedStudents.length} {t.teacher.classOf} × {hot.length}{" "}

@@ -61,7 +61,7 @@ export function AddQuestionForm() {
   return (
     <section>
       <h2 className="font-display text-sm font-semibold">{t.teacher.formTitle}</h2>
-      <p className="mt-1 text-xs text-bedrock">{t.teacher.formHint}</p>
+      <p className="mt-1 max-w-2xl text-xs text-bedrock">{t.teacher.formHint}</p>
 
       <div className="mt-5 space-y-4 rounded-xl border border-bedrock/20 p-4">
         <label className="block">
