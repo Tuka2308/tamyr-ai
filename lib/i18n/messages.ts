@@ -90,6 +90,7 @@ export type Messages = {
     priorityTitle: string; priorityMetric: string; priorityHint: string;
     priorityStudents: string; priorityErrors: string;
     heatTitle: string; heatHint: string; showAll: string; hideAll: string;
+    scrollHint: string; columnReadout: string;
     allNodesTitle: string; noGaps: string;
     legendRoot: string; legendError: string; legendBlocked: string;
     legendMastered: string; legendOut: string;
@@ -255,6 +256,8 @@ const kk: Messages = {
     priorityStudents: "оқушы", priorityErrors: "тіркелген қате",
     heatTitle: "Жылу картасы", heatHint: "Тек сыныпта нақты олқылық бар түйіндер көрсетілген.",
     showAll: "Барлық 75 түйінді көрсету", hideAll: "Жасыру",
+    scrollHint: "Кестені көлденең сырғытуға болады →",
+    columnReadout: "Баған",
     allNodesTitle: "Барлық түйіндер", noGaps: "олқылық жоқ",
     legendRoot: "түбір", legendError: "қате", legendBlocked: "бөгелген",
     legendMastered: "меңгерілген", legendOut: "бағдарламадан тыс",
@@ -465,6 +468,8 @@ const ru: Messages = {
     priorityStudents: "учеников", priorityErrors: "зафиксированных ошибок",
     heatTitle: "Тепловая карта", heatHint: "Показаны только узлы, где у класса действительно есть пробелы.",
     showAll: "Показать все 75 узлов", hideAll: "Свернуть",
+    scrollHint: "Таблицу можно прокручивать вбок →",
+    columnReadout: "Колонка",
     allNodesTitle: "Все узлы программы", noGaps: "без пробелов",
     legendRoot: "корень", legendError: "ошибка", legendBlocked: "заблокировано",
     legendMastered: "освоено", legendOut: "вне программы",
@@ -675,6 +680,8 @@ const en: Messages = {
     priorityStudents: "students", priorityErrors: "recorded errors",
     heatTitle: "Heat map", heatHint: "Only nodes where the class actually has gaps are shown.",
     showAll: "Show all 75 nodes", hideAll: "Collapse",
+    scrollHint: "The table scrolls sideways →",
+    columnReadout: "Column",
     allNodesTitle: "All curriculum nodes", noGaps: "no gaps",
     legendRoot: "root", legendError: "error", legendBlocked: "blocked",
     legendMastered: "mastered", legendOut: "out of scope",

@@ -31,20 +31,42 @@ const LEVEL_OPACITY: Record<HeatLevel, number> = {
  * ради которой карта и существует. Полный список программы доступен ниже
  * по кнопке — это подача, а не сокрытие.
  */
+/**
+ * Высоту шапки задаёт сам текст, а не константа.
+ *
+ * Было: фиксированное h-28 (112px) плюс обрезка строки в JS на 26 символов.
+ * Текст обрывался молча, без единого намёка, что он неполный.
+ *
+ * Считать высоту «по числу символов» тоже нельзя — проверено в браузере:
+ * заголовок из 44 символов требует 259px, а из 40 символов — 271px, потому
+ * что ширина букв разная. Поэтому в vertical-rl высоту не фиксируем вовсе:
+ * инлайновая ось там вертикальная, и строка сама занимает столько, сколько
+ * ей нужно, в любой локали.
+ *
+ * Потолок оставлен только как страховка от патологически длинного заголовка
+ * в будущем: сверх него CSS обрезает с многоточием, обрезка видна, а полное
+ * название читается в подписи под таблицей.
+ */
+const HEADER_MAX = 320;
+
 export function HeatMap() {
   const { locale, t } = useLocale();
   const [showAll, setShowAll] = useState(false);
+  const [activeNodeId, setActiveNodeId] = useState<string | null>(null);
 
   const hot = hotNodes();
   const hotIds = new Set(hot.map((h) => h.node.id));
   const rest = graph.nodes.filter((n) => !hotIds.has(n.id));
 
+  const active = activeNodeId ? graph.byId.get(activeNodeId) : null;
+
   return (
     <section>
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h2 className="font-display text-sm font-semibold">{t.teacher.heatTitle}</h2>
-        <p className="max-w-md text-xs text-bedrock">{t.teacher.heatHint}</p>
       </div>
+
+      <p className="mt-2 text-xs text-bedrock sm:hidden">{t.teacher.scrollHint}</p>
 
       {/* Широкая таблица скроллится внутри себя, страница по горизонтали не едет.
           contain: paint обязателен вдобавок к overflow-x: несмотря на корректный
@@ -68,22 +90,39 @@ export function HeatMap() {
                 {t.teacher.classOf}
               </th>
               {hot.map((h) => (
-                <th
-                  key={h.node.id}
-                  scope="col"
-                  className="px-1 py-2 align-bottom"
-                  title={h.node.title[locale]}
-                >
-                  {/* Вертикальные подписи: иначе 11 колонок не помещаются. */}
-                  <span
-                    className="mx-auto block h-28 whitespace-nowrap text-left font-medium text-bedrock"
-                    style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+                <th key={h.node.id} scope="col" className="px-1 py-2 align-bottom">
+                  {/* Кнопка, а не просто ячейка: полный текст должен открываться
+                      и мышью, и с клавиатуры. Всплывающую подсказку здесь не
+                      сделать — обёртка таблицы несёт contain: paint и обрежет
+                      её, поэтому полное название выводится под таблицей. */}
+                  <button
+                    type="button"
+                    title={h.node.title[locale]}
+                    aria-label={`${h.node.title[locale]} — ${h.rootFor}`}
+                    onMouseEnter={() => setActiveNodeId(h.node.id)}
+                    onMouseLeave={() => setActiveNodeId(null)}
+                    onFocus={() => setActiveNodeId(h.node.id)}
+                    onBlur={() => setActiveNodeId(null)}
+                    className="mx-auto block cursor-help rounded"
                   >
-                    {h.node.title[locale].slice(0, 26)}
-                  </span>
-                  <span className="mt-1 block text-center font-display text-[0.65rem] text-ink">
-                    {h.rootFor}
-                  </span>
+                    {/* Вертикальные подписи: иначе 11 колонок не помещаются.
+                        В vertical-rl инлайновая ось — вертикальная, поэтому
+                        многоточие даёт именно ограничение по высоте. */}
+                    <span
+                      className="block overflow-hidden whitespace-nowrap text-left font-medium text-bedrock"
+                      style={{
+                        writingMode: "vertical-rl",
+                        transform: "rotate(180deg)",
+                        maxHeight: `${HEADER_MAX}px`,
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {h.node.title[locale]}
+                    </span>
+                    <span className="mt-1 block text-center font-display text-[0.65rem] text-ink">
+                      {h.rootFor}
+                    </span>
+                  </button>
                 </th>
               ))}
             </tr>
@@ -123,6 +162,23 @@ export function HeatMap() {
           </tbody>
         </table>
       </div>
+
+      {/* Полное название колонки под наведением или фокусом. Место
+          зарезервировано всегда, чтобы таблица не прыгала. */}
+      <p className="mt-2 min-h-5 text-xs" aria-live="polite">
+        {active ? (
+          <>
+            <span className="text-bedrock">{t.teacher.columnReadout}: </span>
+            <span className="font-medium">{active.title[locale]}</span>
+            <span className="text-bedrock">
+              {" · "}
+              {active.grade} {t.common.grade}
+            </span>
+          </>
+        ) : (
+          <span className="text-bedrock">{t.teacher.heatHint}</span>
+        )}
+      </p>
 
       <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[0.7rem] text-bedrock">
         <Legend color="var(--color-root)" label={t.teacher.legendRoot} />
