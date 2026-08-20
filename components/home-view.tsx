@@ -13,7 +13,12 @@ export function HomeView({ strata, rootId }: { strata: Stratum[]; rootId: string
       {/* Асимметричная сетка: тезис слева и шире, разрез справа. */}
       <div className="grid gap-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-14">
         <section>
-          <p className="font-display text-xs uppercase tracking-[0.18em] text-bedrock">
+          {/* min-h-8 — резерв под две строки кикера, пока не загрузился Unbounded.
+              В системном фолбэке строка не помещается и переносится, а после
+              подмены шрифта схлопывается в одну — контент ниже дёргался на 16px.
+              Резерв снят с sm и выше: там кикер и так в одну строку в обоих
+              состояниях, и статический min-height дал бы пустой зазор. */}
+          <p className="min-h-8 font-display text-xs uppercase tracking-[0.18em] text-bedrock sm:min-h-0">
             {t.home.kicker}
           </p>
 
