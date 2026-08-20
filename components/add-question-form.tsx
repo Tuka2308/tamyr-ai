@@ -108,6 +108,7 @@ export function AddQuestionForm() {
                 <input
                   value={option}
                   onChange={(e) => setOptions(patch(options, i, e.target.value))}
+                  aria-label={`${t.teacher.formOption} ${String.fromCharCode(65 + i)}`}
                   className="min-w-0 flex-1 rounded border-2 border-bedrock/25 bg-white px-2 py-1.5 text-sm"
                 />
               </div>
@@ -118,6 +119,7 @@ export function AddQuestionForm() {
                   <input
                     value={misconceptions[i] ?? ""}
                     onChange={(e) => setMisconceptions(patch(misconceptions, i, e.target.value))}
+                    aria-label={`${t.teacher.formMisconception} — ${String.fromCharCode(65 + i)}`}
                     placeholder={t.teacher.formMisconception}
                     className="min-w-0 flex-1 rounded border border-bedrock/25 bg-white px-2 py-1.5 text-xs"
                   />
@@ -139,7 +141,7 @@ export function AddQuestionForm() {
           ))}
         </fieldset>
 
-        {invalid && <p className="text-xs text-root">{t.teacher.formErrors}</p>}
+        {invalid && <p className="text-xs text-root-deep">{t.teacher.formErrors}</p>}
 
         <button
           type="button"
@@ -181,7 +183,7 @@ export function AddQuestionForm() {
                   <button
                     type="button"
                     onClick={() => setAdded(removeTeacherQuestion(question.id))}
-                    className="text-xs text-root underline underline-offset-4"
+                    className="text-xs text-root-deep underline underline-offset-4"
                   >
                     {t.teacher.formRemove}
                   </button>

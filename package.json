@@ -16,7 +16,9 @@
     "generate:sw": "tsx scripts/generate-sw.ts",
     "validate:sw": "tsx scripts/validate-sw.ts",
     "test:offline": "node scripts/offline-test.mjs",
-    "test:a11y": "node scripts/a11y-test.mjs"
+    "test:a11y": "node scripts/a11y-test.mjs",
+    "test:qa": "node scripts/qa-run.mjs",
+    "demo:profile": "tsx scripts/demo-profile.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",
@@ -29,6 +31,7 @@
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "lighthouse": "^13.4.1",
     "puppeteer-core": "^25.8.0",
     "tailwindcss": "^4.1.13",
     "tsx": "^4.20.5",

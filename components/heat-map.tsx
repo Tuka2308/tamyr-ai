@@ -98,7 +98,6 @@ export function HeatMap() {
                   <button
                     type="button"
                     title={h.node.title[locale]}
-                    aria-label={`${h.node.title[locale]} — ${h.rootFor}`}
                     onMouseEnter={() => setActiveNodeId(h.node.id)}
                     onMouseLeave={() => setActiveNodeId(null)}
                     onFocus={() => setActiveNodeId(h.node.id)}

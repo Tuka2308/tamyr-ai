@@ -62,7 +62,7 @@ export function AiTracePanel({ response }: { response: ExplainResponse | null })
 
                 {item.step === "verification" && item.details.length > 0 && (
                   <div className="mt-1.5 rounded border border-root/40 bg-root/5 px-2 py-1.5">
-                    <p className="font-medium text-root">{t.aiTrace.unsupportedTitle}</p>
+                    <p className="font-medium text-root-deep">{t.aiTrace.unsupportedTitle}</p>
                     <ul className="mt-1 space-y-0.5">
                       {item.details.map((claim) => (
                         <li key={claim}>· {claim}</li>

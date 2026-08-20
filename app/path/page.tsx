@@ -7,10 +7,20 @@ import { loadResult } from "@/lib/session";
 import { buildFullTrajectory, type TrajectoryState, type TrajectoryStep } from "@/lib/trajectory";
 import type { DiagnosisResult } from "@/lib/types";
 
+/** Цвет маркера-точки: нетекстовый элемент, достаточно 3:1. */
 const STATE_COLOR: Record<TrajectoryState, string> = {
   mastered: "var(--color-spring)",
   root: "var(--color-root)",
   next: "var(--color-vein)",
+  locked: "var(--color-bedrock)",
+  target: "var(--color-ink)",
+};
+
+/** Цвет ПОДПИСИ: яркие акценты не проходят 4,5:1 на светлом фоне. */
+const STATE_TEXT_COLOR: Record<TrajectoryState, string> = {
+  mastered: "var(--color-spring-deep)",
+  root: "var(--color-root-deep)",
+  next: "var(--color-vein-deep)",
   locked: "var(--color-bedrock)",
   target: "var(--color-ink)",
 };
@@ -64,6 +74,7 @@ export default function PathPage() {
       <ol className="mt-8 space-y-0">
         {[...steps].reverse().map((step, i, arr) => {
           const color = STATE_COLOR[step.state];
+          const textColor = STATE_TEXT_COLOR[step.state];
           const isLast = i === arr.length - 1;
 
           return (
@@ -102,7 +113,7 @@ export default function PathPage() {
                   <span>
                     {step.node.grade} {t.common.grade}
                   </span>
-                  <span style={{ color }}>{label[step.state]}</span>
+                  <span style={{ color: textColor }}>{label[step.state]}</span>
                 </p>
               </Link>
             </li>

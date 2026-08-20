@@ -45,7 +45,7 @@ export function DiagnosisTrace({ steps }: { steps: Step[] }) {
             <div className="flex items-start gap-2">
               <span
                 className="mt-0.5 shrink-0 font-display font-bold"
-                style={{ color: step.correct ? "var(--color-spring)" : "var(--color-root)" }}
+                style={{ color: step.correct ? "var(--color-spring-deep)" : "var(--color-root-deep)" }}
               >
                 {step.correct ? "✓" : "✗"}
               </span>
@@ -55,10 +55,10 @@ export function DiagnosisTrace({ steps }: { steps: Step[] }) {
 
                 <p className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-bedrock">
                   {step.phase === "boundary" && (
-                    <span className="text-root">◆ {t.diagnose.phaseBoundary}</span>
+                    <span className="text-root-deep">◆ {t.diagnose.phaseBoundary}</span>
                   )}
                   {step.phase === "language_check" && (
-                    <span className="text-vein">{t.diagnose.phaseLanguageRoot}</span>
+                    <span className="text-vein-deep">{t.diagnose.phaseLanguageRoot}</span>
                   )}
                   {step.chainIndex !== null && <span>#{step.chainIndex}</span>}
                   {narrowed && (
@@ -75,7 +75,7 @@ export function DiagnosisTrace({ steps }: { steps: Step[] }) {
                 </p>
 
                 {step.demotedCandidate && (
-                  <p className="mt-1 text-root">
+                  <p className="mt-1 text-root-deep">
                     {t.diagnose.demoted}: {graph.byId.get(step.demotedCandidate)?.title[locale]}
                   </p>
                 )}

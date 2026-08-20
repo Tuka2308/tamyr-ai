@@ -39,7 +39,7 @@ export default function ResultPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <p className="font-display text-xs uppercase tracking-[0.18em] text-root">
+      <p className="font-display text-xs uppercase tracking-[0.18em] text-root-deep">
         {t.result.kicker}
       </p>
 
@@ -53,7 +53,7 @@ export default function ResultPage() {
           {result.root.grade} {t.common.grade}
         </span>
         {gradesDown > 0 && (
-          <span className="text-root">
+          <span className="text-root-deep">
             ↓ {gradesDown} {t.result.gradesDown}
           </span>
         )}
@@ -69,11 +69,11 @@ export default function ResultPage() {
       {/* Уточняющий проход — прямое доказательство, что мы не взяли ответ попроще. */}
       {refined && (
         <div className="mt-6 rounded-xl border-2 border-root/40 bg-root/5 p-4">
-          <p className="font-display text-sm font-semibold text-root">{t.result.refinedTitle}</p>
+          <p className="font-display text-sm font-semibold text-root-deep">{t.result.refinedTitle}</p>
           <p className="mt-1.5 text-sm leading-relaxed text-ink/80">{t.result.refinedBody}</p>
           <p className="mt-2 text-xs text-bedrock">
             {graph.byId.get(result.candidateBeforeRefinement)?.title[locale]} →{" "}
-            <span className="text-root">{result.root.title[locale]}</span>
+            <span className="text-root-deep">{result.root.title[locale]}</span>
           </p>
         </div>
       )}
@@ -113,7 +113,7 @@ export default function ResultPage() {
         {result.confidence === "single_item" && <li>· {t.result.weakEvidence}</li>}
         {result.truncated && <li>· {t.result.truncated}</li>}
         {result.languageBarrier === "detected" && (
-          <li className="text-vein">· {t.result.barrierDetected}</li>
+          <li className="text-vein-deep">· {t.result.barrierDetected}</li>
         )}
         {result.languageBarrier === "not_assessed" && <li>· {t.result.barrierNotAssessed}</li>}
       </ul>

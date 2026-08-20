@@ -19,7 +19,7 @@ export function SiteHeader() {
 
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="font-display text-base font-bold tracking-tight">
-          TAMYR<span className="text-root">.</span>AI
+          TAMYR<span className="text-root-deep">.</span>AI
         </Link>
 
         <nav aria-label={t.nav.home} className="ml-auto hidden items-center gap-5 md:flex">

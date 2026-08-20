@@ -57,7 +57,7 @@ function StatRow({ stat }: { stat: Stat }) {
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <span
           className="font-display text-xl font-bold tabular-nums sm:text-2xl"
-          style={{ color: isPivot ? "var(--color-vein)" : undefined }}
+          style={{ color: isPivot ? "var(--color-vein-deep)" : undefined }}
         >
           {stat.value}
         </span>

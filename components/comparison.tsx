@@ -59,7 +59,7 @@ export function Comparison({ result }: { result: DiagnosisResult }) {
             <Row label={t.compare.questions} value={String(naive.questionsAsked)} />
             <Row label={t.compare.nodesVisited} value={String(naive.nodesVisited)} />
             <Row label={t.compare.gradesDown} value={String(naive.gradesDescended)} />
-            <Row label={t.compare.causeFound} value={t.compare.no} tone="var(--color-root)" />
+            <Row label={t.compare.causeFound} value={t.compare.no} tone="var(--color-root-deep)" />
           </dl>
 
           <p className="mt-3 border-t border-bedrock/20 pt-3 text-xs font-medium">
@@ -69,7 +69,7 @@ export function Comparison({ result }: { result: DiagnosisResult }) {
 
         {/* TAMYR */}
         <div className="flex flex-col rounded-xl border-2 border-root/40 bg-root/5 p-4">
-          <h3 className="font-display text-sm font-semibold text-root">{t.compare.tamyrTitle}</h3>
+          <h3 className="font-display text-sm font-semibold text-root-deep">{t.compare.tamyrTitle}</h3>
           <p className="mt-1 text-xs text-bedrock">{t.compare.tamyrRule}</p>
 
           {/* Ступеньки вниз: каждый шаг спуска смещён правее и ниже. */}
@@ -95,7 +95,7 @@ export function Comparison({ result }: { result: DiagnosisResult }) {
             })}
           </ul>
 
-          <p className="mt-4 text-xs font-medium text-root">{result.root.title[locale]}</p>
+          <p className="mt-4 text-xs font-medium text-root-deep">{result.root.title[locale]}</p>
 
           <dl className="mt-auto space-y-1 pt-4 text-xs">
             <Row label={t.compare.questions} value={String(result.questionsAsked)} />
@@ -103,8 +103,8 @@ export function Comparison({ result }: { result: DiagnosisResult }) {
               label={t.compare.nodesVisited}
               value={String(new Set(result.steps.map((s) => s.nodeId)).size)}
             />
-            <Row label={t.compare.gradesDown} value={String(gradesDown)} tone="var(--color-root)" />
-            <Row label={t.compare.causeFound} value={t.compare.yes} tone="var(--color-spring)" />
+            <Row label={t.compare.gradesDown} value={String(gradesDown)} tone="var(--color-root-deep)" />
+            <Row label={t.compare.causeFound} value={t.compare.yes} tone="var(--color-spring-deep)" />
           </dl>
 
           <p className="mt-3 border-t border-root/20 pt-3 text-xs font-medium">

@@ -20,7 +20,7 @@ export function HomeView({ strata, rootId }: { strata: Stratum[]; rootId: string
           <h1 className="mt-5 font-display text-3xl leading-[1.12] font-bold sm:text-5xl">
             {t.home.thesis}
             <br />
-            <span className="text-root">{t.home.thesisAccent}</span>
+            <span className="text-root-deep">{t.home.thesisAccent}</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ink/80 sm:text-lg">
@@ -44,7 +44,7 @@ export function HomeView({ strata, rootId }: { strata: Stratum[]; rootId: string
               <p className="mt-2 text-sm leading-relaxed text-ink/70">{t.home.contrastOthers}</p>
             </div>
             <div className="rounded-xl border-2 border-root/40 bg-root/5 p-4">
-              <h2 className="font-display text-sm font-semibold text-root">TAMYR</h2>
+              <h2 className="font-display text-sm font-semibold text-root-deep">TAMYR</h2>
               <p className="mt-2 text-sm leading-relaxed text-ink/80">{t.home.contrastTamyr}</p>
             </div>
           </div>

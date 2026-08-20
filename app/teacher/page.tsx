@@ -31,14 +31,14 @@ export default function TeacherPage() {
           <span>
             <span className="text-bedrock">{t.teacher.deepestStudent}:</span>{" "}
             <span className="font-medium">{summary.deepest.name}</span>{" "}
-            <span className="tabular-nums text-root">{summary.deepest.gdi.toFixed(2)}</span>
+            <span className="tabular-nums text-root-deep">{summary.deepest.gdi.toFixed(2)}</span>
           </span>
         )}
       </div>
 
       {/* Автоприоритет — главный ответ панели на вопрос «с чего начинать». */}
       <section className="mt-8 rounded-2xl border-2 border-root/40 bg-root/5 p-5 sm:p-6">
-        <h2 className="font-display text-xs uppercase tracking-[0.14em] text-root">
+        <h2 className="font-display text-xs uppercase tracking-[0.14em] text-root-deep">
           {t.teacher.priorityTitle}
         </h2>
 

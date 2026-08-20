@@ -89,7 +89,7 @@ function Section({
     <section className="mt-10">
       <h2
         className="font-display text-sm font-semibold"
-        style={{ color: accent ? "var(--color-root)" : undefined }}
+        style={{ color: accent ? "var(--color-root-deep)" : undefined }}
       >
         {title}
       </h2>

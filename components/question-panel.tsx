@@ -52,7 +52,7 @@ export function QuestionPanel({
         <p
           className={[
             "font-display text-[0.7rem] uppercase tracking-[0.14em]",
-            isLanguageCheck ? "text-vein" : isBoundary ? "text-root" : "text-bedrock",
+            isLanguageCheck ? "text-vein-deep" : isBoundary ? "text-root-deep" : "text-bedrock",
           ].join(" ")}
         >
           {isBoundary && "◆ "}

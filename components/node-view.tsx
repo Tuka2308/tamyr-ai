@@ -72,7 +72,7 @@ export function NodeView({ node, questions }: { node: Node; questions: Question[
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
       <p className="font-display text-xs uppercase tracking-[0.16em] text-bedrock">
         {node.grade} {t.common.grade}
-        {isRoot && <span className="ml-2 text-root">· {t.path.stateRoot}</span>}
+        {isRoot && <span className="ml-2 text-root-deep">· {t.path.stateRoot}</span>}
       </p>
       <h1 className="mt-2 font-display text-2xl leading-tight font-bold sm:text-3xl">
         {node.title[locale]}
@@ -204,7 +204,7 @@ export function NodeView({ node, questions }: { node: Node; questions: Question[
               >
                 <p
                   className="font-display text-sm font-semibold"
-                  style={{ color: correct ? "var(--color-spring)" : "var(--color-root)" }}
+                  style={{ color: correct ? "var(--color-spring-deep)" : "var(--color-root-deep)" }}
                 >
                   {correct ? t.node.correct : t.node.wrong}
                 </p>
@@ -222,7 +222,7 @@ export function NodeView({ node, questions }: { node: Node; questions: Question[
                     </p>
                     <p className="mt-2 text-sm leading-relaxed">
                       {question.options[question.correctIndex]} —{" "}
-                      <span className="text-spring">{t.node.correct}</span>
+                      <span className="text-spring-deep">{t.node.correct}</span>
                     </p>
                   </>
                 )}

@@ -68,7 +68,7 @@ export function CrossSection({ state }: { state: DiagnosisState }) {
           {t.diagnose.entryTitle}
         </p>
         <p className="mt-1 text-sm font-medium leading-snug">{target.title[locale]}</p>
-        <p className="mt-0.5 text-xs text-bedrock">
+        <p className="mt-0.5 text-xs text-bedrock-light">
           {target.grade} {t.common.grade} · {t.diagnose.entryHint}
         </p>
       </div>
@@ -133,7 +133,7 @@ export function CrossSection({ state }: { state: DiagnosisState }) {
       </div>
 
       {/* Легенда: состояния узлов должны читаться без объяснений ведущего. */}
-      <ul className="flex shrink-0 flex-wrap gap-x-4 gap-y-1 border-t border-chalk/10 px-4 py-2 text-[0.65rem] text-bedrock sm:px-5">
+      <ul className="flex shrink-0 flex-wrap gap-x-4 gap-y-1 border-t border-chalk/10 px-4 py-2 text-[0.65rem] text-bedrock-light sm:px-5">
         <Legend color="var(--color-spring)" label={t.graph.stateMastered} />
         <Legend color="var(--color-vein)" label={t.graph.stateTesting} />
         <Legend color="var(--color-root)" label={t.graph.stateRoot} />

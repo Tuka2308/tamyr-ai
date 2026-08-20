@@ -36,7 +36,7 @@ export function StrataPreview({ strata, rootId }: { strata: Stratum[]; rootId: s
           >
             <div className="flex shrink-0 items-baseline gap-2 sm:w-24 sm:flex-col sm:gap-0">
               <span className="font-display text-3xl leading-none font-bold">{stratum.grade}</span>
-              <span className="text-xs text-bedrock">{t.graph.gradeShort}</span>
+              <span className="text-xs text-bedrock-light">{t.graph.gradeShort}</span>
             </div>
 
             <div
@@ -60,7 +60,7 @@ export function StrataPreview({ strata, rootId }: { strata: Stratum[]; rootId: s
               })}
             </div>
 
-            <p className="shrink-0 text-xs text-bedrock sm:w-56 sm:text-right">
+            <p className="shrink-0 text-xs text-bedrock-light sm:w-56 sm:text-right">
               {stratum.keyNode.title[locale]}
               <span className="ml-1 whitespace-nowrap text-chalk/70">
                 {t.graph.blocks.replace("{n}", Math.round(stratum.keyNode.centrality * 100).toString())}
