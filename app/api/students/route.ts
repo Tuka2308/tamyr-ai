@@ -1,28 +1,32 @@
 import { NextResponse } from "next/server";
 import { loadGraph } from "@/lib/graph";
-import { deleteStudent, listStudents, saveStudent, TEST_NAME_PREFIX, type LiveStudent } from "@/lib/students-store";
+import { saveStudent, type LiveStudent } from "@/lib/students-store";
 import { GRADES, LOCALES, type Grade, type Locale } from "@/lib/types";
 
 /**
- * Живые ученики: запись после диагностики и чтение для панели учителя.
+ * Запись ученика после диагностики. ТОЛЬКО POST.
+ *
+ * Чтения здесь намеренно нет. Раньше был GET, и он отдавал анонимному
+ * запросу имена, классы и результаты диагностики всех учеников — персональные
+ * данные детей в открытом доступе. Панели учителя он при этом не нужен:
+ * /teacher и /teacher/[id] — серверные компоненты, они зовут listStudents()
+ * напрямую, минуя HTTP. Эндпоинт использовал только сквозной тест.
  *
  * Запись не является обязательной для ученика — его результат уже лежит
  * в localStorage. Поэтому ошибки здесь не должны ничего ломать на клиенте:
- * отдаём понятный статус, а клиент их проглатывает.
+ * отдаём понятный статус, а клиент его проглатывает.
+ *
+ * ИЗВЕСТНОЕ ОГРАНИЧЕНИЕ: POST не требует авторизации, потому что аккаунтов
+ * в MVP нет — ученик регистрируется одним именем. Значит, список учителя
+ * можно засорить поддельными записями. Что этому противостоит: строгая
+ * валидация полей, потолок длины имени, проверка узлов по графу. Чего нет:
+ * ограничения частоты запросов. Зафиксировано в docs/preregistration.md.
  */
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const MAX_NAME = 80;
-
-export async function GET() {
-  const students = await listStudents();
-  return NextResponse.json(
-    { students, count: students.length },
-    { headers: { "Cache-Control": "no-store" } },
-  );
-}
 
 export async function POST(request: Request) {
   let body: Partial<LiveStudent>;
@@ -77,28 +81,4 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({ stored: true, id: student.id }, { status: 201 });
-}
-
-/**
- * Удаление ученика. Нужно ровно для одного: сквозной тест не должен
- * оставлять «Тест a1b2c» в списке, который увидит жюри.
- * Открытый DELETE в продукте с настоящими данными недопустим — здесь он
- * ограничен записями, помеченными как тестовые.
- */
-export async function DELETE(request: Request) {
-  const id = new URL(request.url).searchParams.get("id");
-  if (!id) return NextResponse.json({ error: "Нужен параметр id" }, { status: 400 });
-
-  const student = (await listStudents()).find((s) => s.id === id);
-  if (!student) return NextResponse.json({ deleted: false }, { status: 404 });
-
-  if (!student.name.startsWith(TEST_NAME_PREFIX)) {
-    return NextResponse.json(
-      { error: "Удалять можно только тестовые записи" },
-      { status: 403 },
-    );
-  }
-
-  await deleteStudent(id);
-  return NextResponse.json({ deleted: true, id });
 }

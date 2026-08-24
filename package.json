@@ -19,7 +19,8 @@
     "test:a11y": "node scripts/a11y-test.mjs",
     "test:qa": "node scripts/qa-run.mjs",
     "demo:profile": "tsx scripts/demo-profile.ts",
-    "test:roster": "node scripts/roster-test.mjs"
+    "test:roster": "node --env-file-if-exists=.env.local scripts/roster-test.mjs",
+    "cleanup:test-students": "node --env-file-if-exists=.env.local scripts/cleanup-test-students.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",

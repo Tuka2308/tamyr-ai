@@ -8,6 +8,7 @@
  * перезапуска приложения. Плюс доступность списка и пустое состояние.
  */
 import puppeteer from "puppeteer-core";
+import { cleanupTestStudents, countTestStudents } from "./cleanup-test-students.mjs";
 
 const BASE = process.env.BASE_URL ?? "http://localhost:3211";
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
@@ -155,18 +156,17 @@ ok(`у них видимый фокус (${focusVisible}/${tabbed})`, tabbed > 0
 
 ok(`ноль console.error (${errors.length})`, errors.length === 0, errors.slice(0, 2).join(" | "));
 
-/* ---------- Уборка: тестовый ученик не должен остаться в списке ---------- */
-const cleaned = await page.evaluate(async (base) => {
-  const list = await fetch(base + "/api/students").then((r) => r.json());
-  const stale = list.students.filter((s) => s.name.startsWith("Тест "));
-  let n = 0;
-  for (const s of stale) {
-    const r = await fetch(`${base}/api/students?id=${encodeURIComponent(s.id)}`, { method: "DELETE" });
-    if (r.ok) n++;
-  }
-  return { removed: n, left: stale.length - n };
-}, BASE);
-ok(`тестовые записи убраны (${cleaned.removed})`, cleaned.left === 0, `осталось ${cleaned.left}`);
+/* ---------- Уборка ----------
+   И удаление, и подсчёт идут через Blob напрямую, а не через HTTP:
+   в API проекта нет ни метода удаления, ни метода чтения списка —
+   и то и другое выставляло бы наружу лишнее. Нужен BLOB_READ_WRITE_TOKEN. */
+const cleaned = await cleanupTestStudents({ quiet: true });
+const leftover = await countTestStudents();
+ok(
+  `тестовые записи убраны (${cleaned.removed})`,
+  !cleaned.skipped && leftover === 0,
+  cleaned.skipped ? "нет токена Blob" : `осталось ${leftover}`,
+);
 
 await browser.close();
 
