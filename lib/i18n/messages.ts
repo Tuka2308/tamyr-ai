@@ -41,6 +41,7 @@ export type Messages = {
   onboarding: {
     title: string; step: string;
     gradeTitle: string; gradeHint: string;
+    nameLabel: string; namePlaceholder: string; nameHint: string;
     subjectTitle: string; subjectHint: string; mathLabel: string; otherSoon: string;
     goalTitle: string; goalHint: string;
     goalEnt: string; goalSchool: string; goalCatchup: string;
@@ -98,6 +99,13 @@ export type Messages = {
     formOption: string; formCorrect: string; formMisconception: string; formTag: string;
     formAdd: string; formAdded: string; formShowJson: string; formHideJson: string;
     formJsonHint: string; formRemove: string; formErrors: string; addedBadge: string;
+    rosterTitle: string; rosterHint: string;
+    rosterLive: string; rosterDemo: string;
+    badgeLive: string; badgeDemo: string;
+    rosterEmpty: string; rosterEmptyHint: string;
+    rosterOpen: string; rosterDiagnosed: string; rosterRoot: string;
+    viewTitle: string; viewBack: string; viewReadOnly: string;
+    viewDemoWarning: string; viewNoErrors: string; viewErrors: string;
   };
   about: {
     title: string; lede: string;
@@ -182,6 +190,8 @@ const kk: Messages = {
   onboarding: {
     title: "Бірнеше сұрақ", step: "қадам",
     gradeTitle: "Сіз нешінші сыныпта оқисыз?", gradeHint: "Диагностика осы деңгейден басталады.",
+    nameLabel: "Атыңыз", namePlaceholder: "Мысалы, Айгүл",
+    nameHint: "Мұғалім сізді тізімде осы атпен көреді.",
     subjectTitle: "Пән", subjectHint: "Қазір бір ғана пән бар — бірақ шын тереңдікпен.",
     mathLabel: "Математика, 5–8 сынып", otherSoon: "Басқа пәндер кейін",
     goalTitle: "Мақсатыңыз қандай?", goalHint: "Траекторияның қарқынына әсер етеді.",
@@ -269,6 +279,16 @@ const kk: Messages = {
     formJsonHint: "Нақты коммитте questions.json файлына түсетін құрылым.",
     formRemove: "Жою", formErrors: "Мәтінді, кемінде екі нұсқаны және бір талдауды толтырыңыз.",
     addedBadge: "мұғалім қосқан",
+    rosterTitle: "Оқушылар", rosterHint: "Диагностикадан өткен оқушы тізімде өзі пайда болады.",
+    rosterLive: "Нақты оқушылар", rosterDemo: "Демо-сынып",
+    badgeLive: "нақты", badgeDemo: "демо",
+    rosterEmpty: "Нақты оқушылар әлі жоқ.",
+    rosterEmptyHint: "Төмендегі демо-сынып — синтетикалық деректер, олардың артында нақты бала жоқ. Бірінші оқушы диагностикадан өткен соң осы жерде пайда болады.",
+    rosterOpen: "Кабинетті ашу", rosterDiagnosed: "диагностика", rosterRoot: "түбір",
+    viewTitle: "Оқушы кабинеті", viewBack: "Тізімге оралу",
+    viewReadOnly: "Мұғалімнің көрінісі — тек оқу үшін.",
+    viewDemoWarning: "Бұл — демо-сыныптың синтетикалық профилі. Артында нақты оқушы жоқ.",
+    viewNoErrors: "Тіркелген қате жоқ.", viewErrors: "Қателер тарихы",
   },
   about: {
     title: "Жоба туралы",
@@ -394,6 +414,8 @@ const ru: Messages = {
   onboarding: {
     title: "Несколько вопросов", step: "шаг",
     gradeTitle: "В каком классе вы учитесь?", gradeHint: "С этого уровня начнётся диагностика.",
+    nameLabel: "Как вас зовут", namePlaceholder: "Например, Айгуль",
+    nameHint: "Под этим именем вас увидит учитель в своём списке.",
     subjectTitle: "Предмет", subjectHint: "Пока один предмет — зато с настоящей глубиной.",
     mathLabel: "Математика, 5–8 класс", otherSoon: "Другие предметы позже",
     goalTitle: "Какая у вас цель?", goalHint: "Влияет на темп траектории.",
@@ -481,6 +503,16 @@ const ru: Messages = {
     formJsonHint: "Структура, которая ушла бы в questions.json при реальном коммите.",
     formRemove: "Удалить", formErrors: "Заполните текст, минимум два варианта и хотя бы один разбор.",
     addedBadge: "добавлено учителем",
+    rosterTitle: "Ученики", rosterHint: "Ученик появляется в списке сам, как только пройдёт диагностику.",
+    rosterLive: "Реальные ученики", rosterDemo: "Демо-класс",
+    badgeLive: "реальный", badgeDemo: "демо",
+    rosterEmpty: "Реальных учеников пока нет.",
+    rosterEmptyHint: "Демо-класс ниже — синтетические данные, за ними не стоит ни один ребёнок. Первый настоящий ученик появится здесь, как только пройдёт диагностику.",
+    rosterOpen: "Открыть кабинет", rosterDiagnosed: "диагностика", rosterRoot: "корень",
+    viewTitle: "Кабинет ученика", viewBack: "Вернуться к списку",
+    viewReadOnly: "Взгляд учителя — только просмотр.",
+    viewDemoWarning: "Это синтетический профиль из демо-класса. За ним не стоит реальный ученик.",
+    viewNoErrors: "Зафиксированных ошибок нет.", viewErrors: "История ошибок",
   },
   about: {
     title: "О проекте",
@@ -606,6 +638,8 @@ const en: Messages = {
   onboarding: {
     title: "A few questions", step: "step",
     gradeTitle: "What grade are you in?", gradeHint: "The diagnosis starts at this level.",
+    nameLabel: "Your name", namePlaceholder: "For example, Aigul",
+    nameHint: "Your teacher will see you under this name.",
     subjectTitle: "Subject", subjectHint: "One subject for now — but with real depth.",
     mathLabel: "Mathematics, grades 5–8", otherSoon: "More subjects later",
     goalTitle: "What is your goal?", goalHint: "It sets the pace of your path.",
@@ -693,6 +727,16 @@ const en: Messages = {
     formJsonHint: "The structure that would go into questions.json on a real commit.",
     formRemove: "Remove", formErrors: "Fill in the text, at least two options and one explanation.",
     addedBadge: "added by teacher",
+    rosterTitle: "Students", rosterHint: "A student appears in this list on their own once they finish the diagnosis.",
+    rosterLive: "Real students", rosterDemo: "Demo class",
+    badgeLive: "real", badgeDemo: "demo",
+    rosterEmpty: "No real students yet.",
+    rosterEmptyHint: "The demo class below is synthetic data — no real child stands behind it. The first real student will appear here as soon as they finish the diagnosis.",
+    rosterOpen: "Open dashboard", rosterDiagnosed: "diagnosed", rosterRoot: "root",
+    viewTitle: "Student dashboard", viewBack: "Back to the list",
+    viewReadOnly: "Teacher's view — read only.",
+    viewDemoWarning: "This is a synthetic profile from the demo class. No real student stands behind it.",
+    viewNoErrors: "No recorded errors.", viewErrors: "Error history",
   },
   about: {
     title: "About the project",

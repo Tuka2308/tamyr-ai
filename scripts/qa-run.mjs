@@ -115,7 +115,12 @@ ok("кабинет: карточки заполнены", /ОТИ|ИГП|GDI/.te
 await page.goto(BASE + "/teacher", { waitUntil: "networkidle0" });
 await sleep(900);
 const teacherBody = await text();
-ok("учитель: автоприоритет 48%", /48%/.test(teacherBody));
+// Конкретное число не зашиваем: приоритет считается по объединённому
+// классу и дрейфует по мере регистраций (48% на одном демо-классе).
+ok("учитель: автоприоритет показан процентом", /\b[1-9]\d?%/.test(teacherBody),
+   (teacherBody.match(/\b[1-9]\d?%/) ?? [""])[0]);
+ok("учитель: список учеников", /Ученики|Оқушылар|Students/i.test(teacherBody));
+ok("учитель: демо-класс подписан", /Демо-класс|Демо-сынып|Demo class/i.test(teacherBody));
 ok("учитель: тепловая карта", /Жылу картасы|Тепловая карта|Heat map/i.test(teacherBody));
 ok("учитель: форма добавления задания", /Тапсырма қосу|Добавить задание|Add a task/i.test(teacherBody));
 

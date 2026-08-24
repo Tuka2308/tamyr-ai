@@ -18,13 +18,16 @@
     "test:offline": "node scripts/offline-test.mjs",
     "test:a11y": "node scripts/a11y-test.mjs",
     "test:qa": "node scripts/qa-run.mjs",
-    "demo:profile": "tsx scripts/demo-profile.ts"
+    "demo:profile": "tsx scripts/demo-profile.ts",
+    "test:roster": "node scripts/roster-test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.117.1",
+    "@vercel/blob": "^2.8.0",
     "next": "^15.5.23",
     "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react-dom": "19.1.1",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",

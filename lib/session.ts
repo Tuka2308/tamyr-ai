@@ -23,11 +23,26 @@ export const TARGET_BY_GRADE: Record<Grade, string> = {
 };
 
 export const DEFAULT_PROFILE: Profile = {
+  id: "",
+  name: "",
   grade: 8,
   subject: "math",
   goal: "ent",
   locale: "kk",
 };
+
+/**
+ * Идентификатор ученика: заводится один раз и переиспользуется.
+ * Повторная диагностика обновляет ту же запись у учителя, а не плодит
+ * нового ученика в списке.
+ */
+export function ensureStudentId(): string {
+  const existing = loadProfile()?.id;
+  if (existing) return existing;
+  return typeof crypto !== "undefined" && crypto.randomUUID
+    ? crypto.randomUUID()
+    : `s_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+}
 
 function read<T>(key: string): T | null {
   if (typeof window === "undefined") return null;

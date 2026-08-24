@@ -9,6 +9,7 @@ import { QuestionPanel } from "@/components/question-panel";
 import { currentQuestion, startDiagnosis, submitAnswer, type DiagnosisState } from "@/lib/diagnose";
 import { useLocale } from "@/lib/i18n";
 import { DEFAULT_PROFILE, loadProfile, saveResult, TARGET_BY_GRADE } from "@/lib/session";
+import { syncStudent } from "@/lib/student-sync";
 
 /**
  * Главный экран демо. Сплит 60/40: слева живой разрез на всю высоту,
@@ -44,6 +45,12 @@ export default function DiagnosePage() {
   useEffect(() => {
     if (!state.result) return;
     saveResult(state.result);
+
+    // Отправка учителю — дополнительный шаг ПОСЛЕ сохранения результата.
+    // Не ждём её и не показываем ошибок: для ученика ничего не меняется.
+    const profile = loadProfile();
+    if (profile) void syncStudent(profile, state.result);
+
     const timer = window.setTimeout(() => router.push("/result"), 900);
     return () => window.clearTimeout(timer);
   }, [state.result, router]);

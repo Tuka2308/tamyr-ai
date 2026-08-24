@@ -1,6 +1,6 @@
 import { descendantsOf, loadGraph, type Graph } from "./graph";
 import { seedStudents } from "./students";
-import type { Node, Student } from "./types";
+import type { ClassStudent, Node, Student } from "./types";
 
 /* ============================================================================
    Агрегация для панели учителя.
@@ -10,6 +10,26 @@ import type { Node, Student } from "./types";
    что должно бросаться в глаза: концентрацию. Полный список узлов остаётся
    доступен в свёрнутом блоке — это подача, а не сокрытие данных.
    ============================================================================ */
+
+/**
+ * Собирает класс: демо-профили плюс живые регистрации.
+ *
+ * Демо остаются, потому что на одном-двух живых учениках тепловая карта
+ * нечитаема и панель перестаёт показывать то, ради чего сделана. Но каждая
+ * запись несёт origin, и в интерфейсе видно, где синтетика, а где нет —
+ * тот же принцип, что у симулятора наивной системы и пустого survey_results.
+ */
+export function combineClass(live: readonly Student[] = []): ClassStudent[] {
+  const demo: ClassStudent[] = seedStudents.map((s) => ({ ...s, origin: "demo" }));
+  const liveIds = new Set(live.map((s) => s.id));
+
+  return [
+    ...live.map((s): ClassStudent => ({ ...s, origin: "live" })),
+    // Если живой ученик каким-то образом получил id демо-профиля,
+    // приоритет у настоящих данных.
+    ...demo.filter((s) => !liveIds.has(s.id)),
+  ];
+}
 
 /** Состояние клетки «ученик × узел». Порядок важен: от тяжёлого к лёгкому. */
 export type HeatLevel =

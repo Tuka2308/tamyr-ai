@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocale } from "@/lib/i18n";
-import { DEFAULT_PROFILE, saveProfile } from "@/lib/session";
+import { DEFAULT_PROFILE, ensureStudentId, loadProfile, saveProfile } from "@/lib/session";
 import { GRADES, LOCALES, type Grade, type Locale, type Profile } from "@/lib/types";
 
 /** Четыре шага, не больше: класс · предмет · цель · язык. */
@@ -15,10 +15,22 @@ export default function OnboardingPage() {
   const [step, setStep] = useState(0);
   const [profile, setProfile] = useState<Profile>({ ...DEFAULT_PROFILE, locale });
 
+  // id и имя переносим из прошлого профиля, если он есть: повторное
+  // прохождение обновляет ту же запись у учителя, а не создаёт вторую.
+  useEffect(() => {
+    const stored = loadProfile();
+    if (stored) setProfile((p) => ({ ...p, id: stored.id, name: stored.name }));
+  }, []);
+
   const patch = (next: Partial<Profile>) => setProfile((p) => ({ ...p, ...next }));
 
   const finish = () => {
-    saveProfile({ ...profile, locale });
+    saveProfile({
+      ...profile,
+      locale,
+      id: profile.id || ensureStudentId(),
+      name: profile.name.trim(),
+    });
     router.push("/diagnose");
   };
 
@@ -45,6 +57,21 @@ export default function OnboardingPage() {
       <div className="mt-10">
         {step === 0 && (
           <Field title={t.onboarding.gradeTitle} hint={t.onboarding.gradeHint}>
+            {/* Имя живёт на первом шаге, а не отдельным пятым: «4 шага,
+                не больше» — зафиксированное решение, и нарушать его ради
+                одного поля не стоит. */}
+            <label className="mb-6 block">
+              <span className="text-sm font-medium">{t.onboarding.nameLabel}</span>
+              <input
+                value={profile.name}
+                onChange={(e) => patch({ name: e.target.value })}
+                placeholder={t.onboarding.namePlaceholder}
+                autoComplete="given-name"
+                className="mt-1.5 w-full rounded-xl border-2 border-bedrock/25 bg-white px-4 py-3 text-base"
+              />
+              <span className="mt-1.5 block text-xs text-bedrock">{t.onboarding.nameHint}</span>
+            </label>
+
             <div className="grid grid-cols-4 gap-2">
               {GRADES.map((grade: Grade) => (
                 <Choice

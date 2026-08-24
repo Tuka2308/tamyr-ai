@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useLocale } from "@/lib/i18n";
 import { heatLevel, hotNodes, type HeatLevel } from "@/lib/teacher";
-import { seedStudents } from "@/lib/students";
+import type { ClassStudent } from "@/lib/types";
 import { loadGraph } from "@/lib/graph";
 
 const graph = loadGraph();
@@ -49,12 +49,12 @@ const LEVEL_OPACITY: Record<HeatLevel, number> = {
  */
 const HEADER_MAX = 320;
 
-export function HeatMap() {
+export function HeatMap({ students }: { students: ClassStudent[] }) {
   const { locale, t } = useLocale();
   const [showAll, setShowAll] = useState(false);
   const [activeNodeId, setActiveNodeId] = useState<string | null>(null);
 
-  const hot = hotNodes();
+  const hot = hotNodes(students);
   const hotIds = new Set(hot.map((h) => h.node.id));
   const rest = graph.nodes.filter((n) => !hotIds.has(n.id));
 
@@ -78,7 +78,7 @@ export function HeatMap() {
       >
         <table className="w-full border-collapse text-xs">
           <caption className="sr-only">
-            {t.teacher.heatTitle}: {seedStudents.length} {t.teacher.classOf} × {hot.length}{" "}
+            {t.teacher.heatTitle}: {students.length} {t.teacher.classOf} × {hot.length}{" "}
             {t.common.nodes}
           </caption>
           <thead>
@@ -127,7 +127,7 @@ export function HeatMap() {
             </tr>
           </thead>
           <tbody>
-            {seedStudents.map((student) => (
+            {students.map((student) => (
               <tr key={student.id} className="border-t border-bedrock/10">
                 <th
                   scope="row"

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { classSummary, heatLevel, hotNodes, topPriority } from "./teacher";
+import { classSummary, combineClass, heatLevel, hotNodes, topPriority } from "./teacher";
 import { seedStudents } from "./students";
 import { loadGraph } from "./graph";
 
@@ -130,5 +130,71 @@ describe("classSummary", () => {
     for (const s of seedStudents) {
       expect(s.gdi).toBeLessThanOrEqual(summary.deepest!.gdi);
     }
+  });
+});
+
+describe("combineClass — демо и живые не смешиваются молча", () => {
+  const live = [
+    { ...seedStudents[0]!, id: "live-1", name: "Настоящий ученик", rootNodeId: "linear_equations" },
+  ];
+
+  it("помечает происхождение каждой записи", () => {
+    const cls = combineClass(live);
+    expect(cls.every((s) => s.origin === "demo" || s.origin === "live")).toBe(true);
+    expect(cls.filter((s) => s.origin === "live")).toHaveLength(1);
+    expect(cls.filter((s) => s.origin === "demo")).toHaveLength(seedStudents.length);
+  });
+
+  it("без живых учеников отдаёт только демо-класс", () => {
+    const cls = combineClass([]);
+    expect(cls).toHaveLength(seedStudents.length);
+    expect(cls.every((s) => s.origin === "demo")).toBe(true);
+  });
+
+  it("ставит живых первыми — их учитель ищет в первую очередь", () => {
+    const cls = combineClass(live);
+    expect(cls[0]!.origin).toBe("live");
+  });
+
+  it("при совпадении id приоритет у настоящих данных", () => {
+    const collide = [{ ...seedStudents[0]!, name: "Перекрыл демо" }];
+    const cls = combineClass(collide);
+    const matching = cls.filter((s) => s.id === seedStudents[0]!.id);
+    expect(matching).toHaveLength(1);
+    expect(matching[0]!.origin).toBe("live");
+    expect(matching[0]!.name).toBe("Перекрыл демо");
+  });
+
+  it("не мутирует исходные seed-профили", () => {
+    combineClass(live);
+    expect((seedStudents[0] as { origin?: string }).origin).toBeUndefined();
+  });
+});
+
+describe("агрегация считается по объединённому классу", () => {
+  it("живой ученик влияет на тепловую карту", () => {
+    const live = [{ ...seedStudents[0]!, id: "live-x", name: "Ж", rootNodeId: "square_root" }];
+    const withLive = hotNodes(combineClass(live));
+    const withoutLive = hotNodes(combineClass([]));
+
+    expect(withLive.find((h) => h.node.id === "square_root")).toBeDefined();
+    expect(withoutLive.find((h) => h.node.id === "square_root")).toBeUndefined();
+  });
+
+  it("сводка класса растёт вместе с числом живых учеников", () => {
+    const live = [{ ...seedStudents[0]!, id: "live-y", name: "Ж" }];
+    expect(classSummary(combineClass(live)).total).toBe(seedStudents.length + 1);
+  });
+
+  it("демо-класс сохраняет показательные 48% — панель не пустеет", () => {
+    const priority = topPriority(2, combineClass([]));
+    expect(Math.round(priority.studentShare * 100)).toBe(48);
+  });
+
+  it("heatLevel работает для живого ученика так же, как для демо", () => {
+    const live = combineClass([
+      { ...seedStudents[0]!, id: "live-z", name: "Ж", rootNodeId: "frac_operations" },
+    ])[0]!;
+    expect(heatLevel(live, "frac_operations")).toBe("root");
   });
 });
